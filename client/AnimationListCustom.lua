@@ -5,40 +5,7 @@ CustomDP.Expressions = {}
 CustomDP.Walks = {}
 CustomDP.Shared = {}
 CustomDP.Dances = {}
-CustomDP.AnimalEmotes = {
-    ["Bdogindicateahead"] = {
-        "creatures@rottweiler@indication@",
-        "indicate_ahead",
-        "Indicate Ahead (big dog)",
-        AnimationOptions = {
-            EmoteLoop = false
-        }
-    },
-    ["Bdogindicatehigh"] = {
-        "creatures@rottweiler@indication@",
-        "indicate_high",
-        "Indicate High (big dog)",
-        AnimationOptions = {
-            EmoteLoop = true
-        }
-    },
-    ["Bdogindicatelow"] = {
-        "creatures@rottweiler@indication@",
-        "indicate_low",
-        "Indicate Low (big dog)",
-        AnimationOptions = {
-            EmoteLoop = false
-        }
-    },    
-    ["bdogshiftpaws"] = {
-        "creatures@rottweiler@tricks@",
-        "paw_right_loop_left",
-        "paw right left loop (big dog)",
-        AnimationOptions = {
-            EmoteLoop = true
-        }
-    }
-}
+CustomDP.AnimalEmotes = {}
 CustomDP.Emotes = {}
 CustomDP.PropEmotes = {}
 
