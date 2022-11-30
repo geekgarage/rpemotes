@@ -2895,15 +2895,7 @@ RP.Dances = {
 ---- ANIMAL EMOTES ----
 ----    BIG DOG    ----
 
-RP.AnimalEmotes = {    
-    ["bdogshiftpaws"] = {
-        "creatures@rottweiler@tricks@",
-        "paw_right_exit",
-        "TEST",
-        AnimationOptions = {
-            EmoteLoop = false
-        }
-    },
+RP.AnimalEmotes = {
     ["bdogbark"] = {
         "creatures@rottweiler@amb@world_dog_barking@idle_a",
         "idle_a",

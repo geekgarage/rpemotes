@@ -5,7 +5,16 @@ CustomDP.Expressions = {}
 CustomDP.Walks = {}
 CustomDP.Shared = {}
 CustomDP.Dances = {}
-CustomDP.AnimalEmotes = {}
+CustomDP.AnimalEmotes = {    
+    ["bdogshiftpaws"] = {
+        "creatures@rottweiler@tricks@",
+        "paw_right_loop",
+        "TEST",
+        AnimationOptions = {
+            EmoteLoop = false
+        }
+    }
+}
 CustomDP.Emotes = {}
 CustomDP.PropEmotes = {}
 
