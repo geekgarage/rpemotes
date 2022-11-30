@@ -13,27 +13,17 @@ CustomDP.AnimalEmotes = {
         AnimationOptions = {
             EmoteLoop = true,
             EmoteMoving = false,
-            Prop = 'prop_big_shit_02',
-            PropBone = 51826,
-            PropPlacement = {
-                0.0,
-                0.2000,
-                -0.4600,
-                0.0,
-                -20.00,
-                0.0
-            },
             PtfxAsset = "scr_amb_chop",
             PtfxName = "ent_anim_dog_poo",
             PtfxNoProp = false,
             PtfxPlacement = {
-                -0.15,
-                -0.35,
-                0.0,
-                0.0,
-                90.0,
-                180.0,
-                1.0
+                0.00,
+                0.00,
+                0.00,
+                0.00,
+                0.00,
+                0.00,
+                0.00
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['poop'],
             PtfxWait = 3000,
