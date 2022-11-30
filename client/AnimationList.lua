@@ -2976,24 +2976,29 @@ RP.AnimalEmotes = {
             EmoteLoop = true
         },
         AdultAnimation = true
-    },
+    },    
     ["bdogdump"] = {
         "creatures@rottweiler@move",
         "dump_loop",
         "Dump (big dog)",
         AnimationOptions = {
-            Prop = 'prop_big_shit_02',
-            PropBone = 51826,
-            PropPlacement = {
-                0.0,
-                0.2000,
-                -0.4600,
-                0.0,
-                -20.00,
-                0.0
-            },
             EmoteLoop = true,
-            EmoteMoving = false
+            EmoteMoving = false,
+            PtfxAsset = "scr_amb_chop",
+            PtfxName = "ent_anim_dog_poo",
+            PtfxNoProp = false,
+            PtfxPlacement = {
+                0.10,
+                -0.08,
+                0.0,
+                0.0,
+                90.0,
+                180.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['poop'],
+            PtfxWait = 3000,
+            PtfxCanHold = true
         }
     },
     ["bdogitch"] = {
