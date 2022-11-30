@@ -2994,6 +2994,24 @@ RP.AnimalEmotes = {
             },
             EmoteLoop = true,
             EmoteMoving = false,
+        },
+    ["bdogdump"] = {
+        "creatures@rottweiler@move",
+        "dump_loop",
+        "Dump (big dog)",
+        AnimationOptions = {
+            Prop = 'prop_big_shit_02',
+            PropBone = 51826,
+            PropPlacement = {
+                0.0,
+                0.2000,
+                -0.4600,
+                0.0,
+                -20.00,
+                0.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = false,
         }
     },
     ["bdogitch"] = {
