@@ -25,7 +25,7 @@ Config = {
     -- You can change the header image for the menu here
     -- Use a 512 x 128 image!
     -- Note this might cause an issue of the image getting stuck on peoples screens
-    CustomMenuEnabled = true,
+    CustomMenuEnabled = false,
     MenuImage = "https://i.imgur.com/9mhoeL2.png", ----[Custom banner IMGUR or GIPHY URLs go here ]---
     -- You can change the menu image by pasting a link above. It must be the same width and length
     -- You can change the name of the menu here or leave it blank to remove the text in front of the custom banners
