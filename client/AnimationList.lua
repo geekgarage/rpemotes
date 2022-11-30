@@ -2898,7 +2898,7 @@ RP.Dances = {
 RP.AnimalEmotes = {    
     ["bdogshiftpaws"] = {
         "creatures@rottweiler@tricks@",
-        "paw_right_eexit",
+        "paw_right_exit",
         "TEST",
         AnimationOptions = {
             EmoteLoop = false
