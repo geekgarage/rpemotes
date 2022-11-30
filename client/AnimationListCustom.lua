@@ -17,13 +17,13 @@ CustomDP.AnimalEmotes = {
             PtfxName = "ent_anim_dog_poo",
             PtfxNoProp = false,
             PtfxPlacement = {
-                0.00,
-                0.00,
-                0.00,
-                0.00,
-                0.00,
-                0.00,
-                0.00
+                -0.15,
+                -0.35,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['poop'],
             PtfxWait = 3000,
