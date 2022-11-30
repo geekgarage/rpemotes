@@ -136,6 +136,7 @@ Config.Languages = {
         ['searchcantsetfav'] = "Shared emotes cannot be set as favorites.",
         ['invalidvariation'] = "Variação de textura inválida. As opções válidas são: %s",
 		['firework'] = "Pressione ~y~G~w~ para usar o fogo de artifício",
+        ['poop'] = "Press ~y~G~w~ to poop", --Need Translation
     },
     ['cs'] = { -- Czech 🇨🇿
         ['emotes'] = 'Animace 🎬',
@@ -195,6 +196,7 @@ Config.Languages = {
         ['searchcantsetfav'] = "Sdílené animace nelze nastavit jako oblíbené.",
         ['invalidvariation'] = "Neplatná variace textury. Platné výběry jsou: %s",
 		['firework'] = "Stiskni ~y~G~w~ pro použití ohňostroje"
+        ['poop'] = "Press ~y~G~w~ to poop", --Need Translation
     },
     ['da'] = { -- Danish 🇩🇰
         ['emotes'] = 'Animationer',
@@ -253,7 +255,8 @@ Config.Languages = {
         ['searchshifttofav'] = "Hold L-Shift og tryk enter for at sætte som favorit.",
         ['searchcantsetfav'] = "Delte animationer kan ikke være favoritter.",
         ['invalidvariation'] = "Ugyldig teksturvariation. Gyldige valg er: %s",
-		['firework'] = "Tryk på ~y~Gw~ for at bruge fyrværkeri" -- GOOGLE TRANSLATED
+		['firework'] = "Tryk på ~y~Gw~ for at bruge fyrværkeri",
+        ['poop'] = "Tryk på ~y~G~w~ for at skide",
     },
     ['nl'] = { -- Dutch 🇳🇱
         ['emotes'] = 'Animaties 🎬',
@@ -312,7 +315,8 @@ Config.Languages = {
         ['searchshifttofav'] = "Houd L-Shift ingedrukt en druk enter om als favoriet op te slaan.",
         ['searchcantsetfav'] = "Gedeelde emotes kunnen niet als favoriet worden ingesteld.",
         ['invalidvariation'] = "Ongeldige textuur variatie. Geldige selecties zijn: %s",
-		['firework'] = "Druk op ~y~Gw~ om vuurwerk te gebruiken" -- GOOGLE TRANSLATED
+		['firework'] = "Druk op ~y~Gw~ om vuurwerk te gebruiken", -- GOOGLE TRANSLATED
+        ['poop'] = "Press ~y~G~w~ to poop", --Need Translation
     },
     ['en'] = { -- English 🇬🇧
         ['emotes'] = 'Emotes 🎬',
@@ -431,7 +435,8 @@ Config.Languages = {
         ['searchshifttofav'] = "Pidä L-Shift painettuna ja aseta suosikiksi painamalla Enter.",
         ['searchcantsetfav'] = "Jaettuja emoteita ei voi asettaa suosikiksi.",
         ['invalidvariation'] = "Virheellinen tekstuurimuunnelma. Kelvollisia valintoja ovat: %s",
-		['firework'] = "Käytä ilotulitteita painamalla ~y~Gw~" -- GOOGLE TRANSLATED
+		['firework'] = "Käytä ilotulitteita painamalla ~y~Gw~", -- GOOGLE TRANSLATED
+        ['poop'] = "Press ~y~G~w~ to poop", --Need Translation
     },
     ['fr'] = { -- French 🇫🇷
         ['emotes'] = 'Emotes 🎬',
@@ -489,7 +494,8 @@ Config.Languages = {
         ['searchshifttofav'] = "Maintenir  L-Shift et appuyer sur entrer pour marquer comme favorie.",
         ['searchcantsetfav'] = "Les emotes partagées ne peuvent pas être mise en favorie.",
         ['invalidvariation'] = "Variation de texture invalide. Les sélections valides sont : %s",
-		['firework'] = "Appuyez sur ~y~Gw~ pour utiliser des feux d'artifice" -- GOOGLE TRANSLATED 
+		['firework'] = "Appuyez sur ~y~Gw~ pour utiliser des feux d'artifice", -- GOOGLE TRANSLATED 
+        ['poop'] = "Press ~y~G~w~ to poop", --Need Translation
     },
     ['de'] = { -- German 🇩🇪
         ['emotes'] = 'Emotes 🎬',
@@ -548,6 +554,7 @@ Config.Languages = {
         ['searchcantsetfav'] = "Geteilte Emotes können nicht als Favorit gesetzt werden.",
         ['invalidvariation'] = "Ungültige Texturvariante. Korrekte auswahlen sind: %s",
 		['firework'] = "Drücke ~y~G~w~, um das Feuerwerk zu benutzen",
+        ['poop'] = "Press ~y~G~w~ to poop", --Need Translation
     },
     ['it'] = { -- Italian 🇮🇹
         ['emotes'] = 'Animazioni 🎬',
@@ -606,7 +613,8 @@ Config.Languages = {
         ['searchshifttofav'] = "Hold L-Shift and press enter to set as favorite.",
         ['searchcantsetfav'] = "Shared emotes cannot be set as favorites.",
         ['invalidvariation'] = "Opzioni colore non valide. scelte valide sono: %s",
-		['firework'] =  "Premere ~y~G~w~ per utilizzare il fuoco d'artificio"
+		['firework'] =  "Premere ~y~G~w~ per utilizzare il fuoco d'artificio",
+        ['poop'] = "Press ~y~G~w~ to poop", --Need Translation
     },
     ['pl'] = { -- Polish 🇵🇱
         ['emotes'] = 'Animacje 🎬',
@@ -665,7 +673,8 @@ Config.Languages = {
         ['searchshifttofav'] = "Przytrzymaj L-Shift i naciśnij Enter by dodać do ulubionych.",
         ['searchcantsetfav'] = "Współdzielona animacja nie może być dodana do ulubionych.",
         ['invalidvariation'] = "Niepoprawny wariant tekstury. Dostępne tekstury to: %s",
-		['firework'] = "Naciśnij ~y~Gw~ aby odpalić fajerwerki"
+		['firework'] = "Naciśnij ~y~Gw~ aby odpalić fajerwerki",
+        ['poop'] = "Press ~y~G~w~ to poop", --Need Translation
     },
     ['ro'] = { -- Romana 🇷🇴
         ['emotes'] = 'Emote-uri 🎬',
@@ -724,7 +733,8 @@ Config.Languages = {
         ['searchshifttofav'] = "Tine apasat L-Shift si apasa enter pentru a seta ca favorit.",
         ['searchcantsetfav'] = "Emote-urile Shared nu pot fi setate ca favorite.",
         ['invalidvariation'] = "Variație nevalidă a texturii. Selectările valide sunt: ​​%s",
-		['firework'] = "Apasa ~y~Gw~ pentru a folosi artificiile"
+		['firework'] = "Apasa ~y~Gw~ pentru a folosi artificiile",
+        ['poop'] = "Press ~y~G~w~ to poop", --Need Translation
     },
     ['ru'] = { -- Russian 
         ['emotes'] = 'Эмоции 🎬',
@@ -783,7 +793,8 @@ Config.Languages = {
         ['searchshifttofav'] = "Удерживайте L-Shift и нажмите Enter, чтобы установить в избранное.",
         ['searchcantsetfav'] = "Парные эмоции не могут быть добавлены в избранное.",
         ['invalidvariation'] = "Недопустимая вариация текстуры. Допустимые варианты: %s",
-		['firework'] = "Нажмите ~y~Gw~, чтобы запустить фейерверк." -- GOOGLE TRANSLATED 
+		['firework'] = "Нажмите ~y~Gw~, чтобы запустить фейерверк.", -- GOOGLE TRANSLATED 
+        ['poop'] = "Press ~y~G~w~ to poop", --Need Translation
     },
     ['es'] = { -- Spanish 🇪🇸
         ['emotes'] = "Animaciones 🎬",
@@ -841,7 +852,8 @@ Config.Languages = {
         ['searchshifttofav'] = "Mantén L-Shift y presiona Enter para guardar como favorito.",
         ['searchcantsetfav'] = "Animaciones compartidas no pueden ser guardadas como favoritas.",
         ['invalidvariation'] = "Variación de textura no válida. Las opciones válidas son: %s",
-		['firework'] = "Presiona ~y~Gw~ para usar los fuegos artificiales" -- GOOGLE TRANSLATED 
+		['firework'] = "Presiona ~y~Gw~ para usar los fuegos artificiales", -- GOOGLE TRANSLATED 
+        ['poop'] = "Press ~y~G~w~ to poop", --Need Translation
     },
     ['sv'] = { -- Swedish 🇸🇪
         ['emotes'] = 'Emotes 🎬',
@@ -901,5 +913,6 @@ Config.Languages = {
         ['searchcantsetfav'] = "Delade Emotes kan inte ställas in som favoriter.",
         ['invalidvariation'] = "Ogiltig texturvariation. Giltiga val är: %s",
 		['firework'] = "Tryck ~y~G~w~ för att avfyra dina fyrverkerier",
+        ['poop'] = "Press ~y~G~w~ to poop", --Need Translation
     },
 }
