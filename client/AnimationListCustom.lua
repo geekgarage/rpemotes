@@ -30,7 +30,7 @@ CustomDP.AnimalEmotes = {
             EmoteLoop = false
         }
     ,}    
-    ["bdoghump"] = {
+    ["bdogshiftpaws"] = {
         "creatures@rottweiler@tricks@",
         "paw_right_loop_left",
         "paw right left loop (big dog)",
