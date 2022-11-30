@@ -195,7 +195,7 @@ Config.Languages = {
         ['searchshifttofav'] = "Podrž L-Shift a stiskni enter pro nastavení animace do oblíbeních.",
         ['searchcantsetfav'] = "Sdílené animace nelze nastavit jako oblíbené.",
         ['invalidvariation'] = "Neplatná variace textury. Platné výběry jsou: %s",
-		['firework'] = "Stiskni ~y~G~w~ pro použití ohňostroje"
+		['firework'] = "Stiskni ~y~G~w~ pro použití ohňostroje",
         ['poop'] = "Press ~y~G~w~ to poop", --Need Translation
     },
     ['da'] = { -- Danish 🇩🇰
