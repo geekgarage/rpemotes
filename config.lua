@@ -372,6 +372,7 @@ Config.Languages = {
         ['searchcantsetfav'] = "Shared emotes cannot be set as favorites.",
         ['invalidvariation'] = "Invalid texture variation. Valid selections are: %s",
 		['firework'] = "Press ~y~G~w~ to use the firework",
+        ['poop'] = "Press ~y~G~w~ to poop",
     },
     ['fi'] = { -- Finnish 🇫🇮
         ['emotes'] = 'Animaatiot 🎬',
