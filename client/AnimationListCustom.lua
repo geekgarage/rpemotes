@@ -13,7 +13,7 @@ CustomDP.AnimalEmotes = {
         AnimationOptions = {
             EmoteLoop = true
         }
-    }
+    },
 }
 CustomDP.Emotes = {}
 CustomDP.PropEmotes = {}
