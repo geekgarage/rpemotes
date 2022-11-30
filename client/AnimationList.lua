@@ -2936,30 +2936,6 @@ RP.AnimalEmotes = {
             EmoteLoop = true
         }
     },
-    ["Bdogindicateahead"] = {
-        "creatures@rottweiler@indication@",
-        "indicate_ahead",
-        "Indicate Ahead (big dog)",
-        AnimationOptions = {
-            EmoteLoop = false
-        }
-    },
-    ["Bdogindicatehigh"] = {
-        "creatures@rottweiler@indication@",
-        "indicate_high",
-        "Indicate High (big dog)",
-        AnimationOptions = {
-            EmoteLoop = false
-        }
-    },
-    ["Bdogindicatealow"] = {
-        "creatures@rottweiler@indication@",
-        "indicate_low",
-        "Indicate Low (big dog)",
-        AnimationOptions = {
-            EmoteLoop = false
-        }
-    },
     ["bdogsitcar"] = {
         "creatures@rottweiler@incar@",
         "sit",
@@ -2977,24 +2953,6 @@ RP.AnimalEmotes = {
         },
         AdultAnimation = true
     },
-    ["bdogdump"] = {
-        "creatures@rottweiler@move",
-        "dump_loop",
-        "Dump (big dog)",
-        AnimationOptions = {
-            Prop = 'prop_big_shit_02',
-            PropBone = 51826,
-            PropPlacement = {
-                0.0,
-                0.2000,
-                -0.4600,
-                0.0,
-                -20.00,
-                0.0
-            },
-            EmoteLoop = true,
-            EmoteMoving = false,
-        },
     ["bdogdump"] = {
         "creatures@rottweiler@move",
         "dump_loop",
