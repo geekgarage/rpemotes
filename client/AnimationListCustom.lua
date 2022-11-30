@@ -6,18 +6,10 @@ CustomDP.Walks = {}
 CustomDP.Shared = {}
 CustomDP.Dances = {}
 CustomDP.AnimalEmotes = {    
-    ["bdogshiftpaws"] = {
-        "creatures@rottweiler@tricks@",
-        "paw_right_loop",
-        "TEST",
-        AnimationOptions = {
-            EmoteLoop = false
-        }
-    }
-    ["bdogdump"] = {
+    ["bdogtest"] = {
         "creatures@rottweiler@move",
         "dump_loop",
-        "Dump (big dog)",
+        "TEST Dump (big dog)",
         AnimationOptions = {
             EmoteLoop = true,
             EmoteMoving = false,
@@ -43,7 +35,7 @@ CustomDP.AnimalEmotes = {
                 180.0,
                 1.0
             },
-            PtfxInfo = Config.Languages[Config.MenuLanguage]['pee'],
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['poop'],
             PtfxWait = 3000,
             PtfxCanHold = true
         }
