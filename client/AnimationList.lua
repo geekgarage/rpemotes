@@ -2986,7 +2986,7 @@ RP.AnimalEmotes = {
             EmoteMoving = false,
             PtfxAsset = "scr_amb_chop",
             PtfxName = "ent_anim_dog_poo",
-            PtfxNoProp = false,
+            PtfxNoProp = true,
             PtfxPlacement = {
                 0.10,
                 -0.08,
