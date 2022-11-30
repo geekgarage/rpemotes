@@ -2944,7 +2944,7 @@ RP.AnimalEmotes = {
             EmoteLoop = false
         }
     },
-    ["Bdogindicateahead"] = {
+    ["Bdogindicatehigh"] = {
         "creatures@rottweiler@indication@",
         "indicate_high",
         "Indicate High (big dog)",
@@ -2952,7 +2952,7 @@ RP.AnimalEmotes = {
             EmoteLoop = false
         }
     },
-    ["Bdogindicateahead"] = {
+    ["Bdogindicatealow"] = {
         "creatures@rottweiler@indication@",
         "indicate_low",
         "Indicate Low (big dog)",
