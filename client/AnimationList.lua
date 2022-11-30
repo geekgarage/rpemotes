@@ -2903,6 +2903,14 @@ RP.AnimalEmotes = {
         AnimationOptions = {
             EmoteLoop = true
         }
+    },    
+    ["bdogshiftpaws"] = {
+        "creatures@rottweiler@tricks@",
+        "paw_right_loop_left",
+        "paw right left loop (big dog)",
+        AnimationOptions = {
+            EmoteLoop = false
+        }
     },
     ["bdogindicateahead"] = {
         "creatures@rottweiler@indication@",
