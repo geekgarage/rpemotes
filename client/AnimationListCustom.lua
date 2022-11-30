@@ -21,9 +21,9 @@ CustomDP.AnimalEmotes = {
                 -0.35,
                 0.0,
                 0.0,
-                0.0,
-                0.0,
-                0.0
+                90.0,
+                180.0,
+                1.0
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['poop'],
             PtfxWait = 3000,
