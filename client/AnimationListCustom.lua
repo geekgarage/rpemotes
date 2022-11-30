@@ -18,7 +18,7 @@ CustomDP.AnimalEmotes = {
             PtfxNoProp = false,
             PtfxPlacement = {
                 0.10,
-                -0.05,
+                -0.08,
                 0.0,
                 0.0,
                 90.0,
