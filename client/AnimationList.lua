@@ -2997,6 +2997,7 @@ RP.AnimalEmotes = {
                 1.0
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['poop'],
+            PtfxWait = 200,
             PtfxCanHold = true
         }
     },
