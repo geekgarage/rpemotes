@@ -13,8 +13,6 @@ if Config.CheckForUpdates then
             end
             VersionLog('success', ('Current Version: %s'):format(currentVersion))
             VersionLog('success', ('Latest Version: %s'):format(text))
-            print(currentVersion)
-            print(text)
             if text == currentVersion then
                 VersionLog('success', 'You are running the latest version.')
             else
