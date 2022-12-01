@@ -49,6 +49,3 @@ for arrayName, array in pairs(CustomDP) do
 end
 -- Free memory
 CustomDP = nil
-end
--- Free memory
-CustomDP = nil
