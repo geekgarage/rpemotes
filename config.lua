@@ -1,8 +1,6 @@
 --- Maintained by TayMcKenzieNZ for the community ---
 --- Leakers and resellers are the absolute scum of the earth ---
 
-include "Translations"
-
 Config = {
     -- Change the language of the menu here!.
     -- Thank you to those who provided translations.
