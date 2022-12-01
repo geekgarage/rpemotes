@@ -25,7 +25,7 @@ Config = {
     -- You can change the header image for the menu here
     -- Use a 512 x 128 image!
     -- Note this might cause an issue of the image getting stuck on peoples screens
-    CustomMenuEnabled = true,
+    CustomMenuEnabled = false,
     MenuImage = "https://i.imgur.com/9mhoeL2.png", ----[Custom banner IMGUR or GIPHY URLs go here ]---
     -- You can change the menu image by pasting a link above. It must be the same width and length
     -- You can change the name of the menu here or leave it blank to remove the text in front of the custom banners
@@ -33,7 +33,7 @@ Config = {
     -- You can change the menu position here
     MenuPosition = "right", -- (left, right)
     -- You can enable or disable the Ragdoll keybinding here.
-    RagdollEnabled = false,
+    RagdollEnabled = true,
     RagdollKeybind = 'u', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
     -- You can enable or disable Ragdoll as Toggle here. Only works if RagdollEnabled is set to true.
     RagdollAsToggle = true,
@@ -52,18 +52,18 @@ Config = {
     -- If you don't like gta notifications, you can disable them here to have messages in the chat.
     NotificationsAsChatMessage = false,
     -- Used for few framework dependent things. Accepted values: "qb-core", false
-    Framework = false,
+    Framework = "qb-core",
     -- You can disable the Adult Emotes here.
-    AdultEmotesDisabled = false,
+    AdultEmotesDisabled = true,
     -- You can disable the Animal Emotes here.
     AnimalEmotesEnabled = true,
     -- Used to enable or disable the search feature in the menu.
     Search = true,
     -- You can disable the handsup here / change the keybind. It is currently set to H
-    HandsupKeybindEnabled = false,
+    HandsupKeybindEnabled = true,
     HandsupKeybind = 'h', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
     -- You can disable the fingrer pointing here / change the keybind. It is currently set to B
-    PointingKeybindEnabled = false,
+    PointingKeybindEnabled = true,
     PointingKeybind = 'b', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
 	CheckForUpdates = true,
 }
