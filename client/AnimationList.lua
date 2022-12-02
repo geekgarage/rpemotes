@@ -577,8 +577,6 @@ RP.Shared = {
         AnimationOptions = {
             EmoteMoving = false,
             EmoteLoop = true,
-            SyncOffsetFront = 0.65,
-            SyncOffsetHeading = 0
         },
         AdultAnimation = true
     },
