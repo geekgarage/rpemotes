@@ -76,6 +76,8 @@ AddEventHandler("SyncPlayEmoteSource", function(emote, player)
 
     local SyncOffsetFront = 1.0
     local SyncOffsetSide = 0.0
+    local SyncOffsetHeight = 0.0
+    local SyncOffsetHeading = 0.0
 
     local AnimationOptions = RP.Shared[emote] and RP.Shared[emote].AnimationOptions
     if AnimationOptions then
@@ -85,6 +87,13 @@ AddEventHandler("SyncPlayEmoteSource", function(emote, player)
         if AnimationOptions.SyncOffsetSide then
             SyncOffsetSide = AnimationOptions.SyncOffsetSide + 0.0
         end
+        if AnimationOptions.SyncOffsetHeight then
+            SyncOffsetHeight = AnimationOptions.SyncOffsetHeight + 0.0
+        end
+        if AnimationOptions.SyncOffsetHeading then
+            SyncOffsetHeading = AnimationOptions.SyncOffsetHeading + 0.0
+        end
+        print(SyncOffsetHeading)
 
         -- There is a priority to the source attached, if it is not set, it will use the target
         if (AnimationOptions.Attachto) then
@@ -99,7 +108,7 @@ AddEventHandler("SyncPlayEmoteSource", function(emote, player)
                 false, false, false, true, 1, true)
         end
     end
-    local coords = GetOffsetFromEntityInWorldCoords(pedInFront, SyncOffsetSide, SyncOffsetFront, 0.0)
+    local coords = GetOffsetFromEntityInWorldCoords(pedInFront, SyncOffsetSide, SyncOffsetFront, SyncOffsetHeight)
     local heading = GetEntityHeading(pedInFront)
     SetEntityHeading(ply, heading - 180.1)
     SetEntityCoordsNoOffset(ply, coords.x, coords.y, coords.z, 0)
