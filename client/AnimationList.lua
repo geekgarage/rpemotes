@@ -564,7 +564,7 @@ RP.Shared = {
         AnimationOptions = {
             EmoteMoving = false,
             EmoteLoop = true,
-            SyncOffsetFront = 1.9
+            SyncOffsetHeading = 180
         },
         AdultAnimation = true
     },
@@ -575,7 +575,8 @@ RP.Shared = {
         "sdoghumping",
         AnimationOptions = {
             EmoteMoving = false,
-            EmoteLoop = true
+            EmoteLoop = true,
+            SyncOffsetHeading = 180
         },
         AdultAnimation = true
     },
