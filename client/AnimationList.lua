@@ -556,34 +556,6 @@ RP.Shared = {
             EmoteDuration = 3000
         }
     },
-    ["bdoghumping"] = { -----------------------------DOG HUMP
-        "creatures@rottweiler@amb@",
-        "hump_loop_chop",
-        "Dogs Humping (Male)",
-        "bdoghumping2",
-        AnimationOptions = {
-            EmoteMoving = false,
-            EmoteLoop = true,
-            SyncOffsetFront = 0.0,
-            SyncOffsetSide = -0.028,
-            SyncOffsetHeading = 0.0
-        },
-        AdultAnimation = true
-    },
-    ["bdoghumping2"] = { -----------------------------DOG HUMP
-        "creatures@rottweiler@amb@",
-        "hump_loop_ladydog",
-        "Dogs Humping (Female)",
-        "bdoghumping",
-        AnimationOptions = {
-            EmoteMoving = false,
-            EmoteLoop = true,
-            SyncOffsetFront = 0.0,
-            SyncOffsetSide = -0.028,
-            SyncOffsetHeading = 0.0
-        },
-        AdultAnimation = true
-    },
     ["hug"] = {
         "mp_ped_interaction",
         "kisses_guy_a",
@@ -1571,6 +1543,34 @@ RP.Shared = {
             EmoteLoop = true
         }
     },
+    ["bdoghumping"] = {
+        "creatures@rottweiler@amb@",
+        "hump_loop_chop",
+        "Dogs Humping (Male)",
+        "bdoghumping2",
+        AnimationOptions = {
+            EmoteMoving = false,
+            EmoteLoop = true,
+            SyncOffsetFront = 0.0,
+            SyncOffsetSide = -0.028,
+            SyncOffsetHeading = 0.0
+        },
+        AdultAnimation = true
+    },
+    ["bdoghumping2"] = {
+        "creatures@rottweiler@amb@",
+        "hump_loop_ladydog",
+        "Dogs Humping (Female)",
+        "bdoghumping",
+        AnimationOptions = {
+            EmoteMoving = false,
+            EmoteLoop = true,
+            SyncOffsetFront = 0.0,
+            SyncOffsetSide = -0.028,
+            SyncOffsetHeading = 0.0
+        },
+        AdultAnimation = true
+    }
 }
 
 --- DANCING EMOTES, SOME WITH PROPS ---
@@ -3021,7 +3021,7 @@ RP.AnimalEmotes = {
             EmoteLoop = true
         },
         AdultAnimation = true
-    },    
+    },
     ["bdogdump"] = {
         "creatures@rottweiler@move",
         "dump_loop",
