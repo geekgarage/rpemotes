@@ -93,7 +93,6 @@ AddEventHandler("SyncPlayEmoteSource", function(emote, player)
         if AnimationOptions.SyncOffsetHeading then
             SyncOffsetHeading = AnimationOptions.SyncOffsetHeading + 0.0
         end
-        print(SyncOffsetHeading)
 
         -- There is a priority to the source attached, if it is not set, it will use the target
         if (AnimationOptions.Attachto) then
