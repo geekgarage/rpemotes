@@ -564,7 +564,8 @@ RP.Shared = {
         AnimationOptions = {
             EmoteMoving = false,
             EmoteLoop = true
-        }
+        },
+        AdultAnimation = true
     },
     ["sdoghumping2"] = { -----------------------------DOG HUMP
         "creatures@rottweiler@amb@",
@@ -574,7 +575,8 @@ RP.Shared = {
         AnimationOptions = {
             EmoteMoving = false,
             EmoteLoop = true
-        }
+        },
+        AdultAnimation = true
     },
     ["hug"] = {
         "mp_ped_interaction",
