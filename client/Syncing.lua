@@ -77,7 +77,7 @@ AddEventHandler("SyncPlayEmoteSource", function(emote, player)
     local SyncOffsetFront = 1.0
     local SyncOffsetSide = 0.0
     local SyncOffsetHeight = 0.0
-    local SyncOffsetHeading = 0.0
+    local SyncOffsetHeading = 180.1
 
     local AnimationOptions = RP.Shared[emote] and RP.Shared[emote].AnimationOptions
     if AnimationOptions then
@@ -110,7 +110,7 @@ AddEventHandler("SyncPlayEmoteSource", function(emote, player)
     end
     local coords = GetOffsetFromEntityInWorldCoords(pedInFront, SyncOffsetSide, SyncOffsetFront, SyncOffsetHeight)
     local heading = GetEntityHeading(pedInFront)
-    SetEntityHeading(ply, heading - 180.1)
+    SetEntityHeading(ply, heading - SyncOffsetHeading)
     SetEntityCoordsNoOffset(ply, coords.x, coords.y, coords.z, 0)
     EmoteCancel()
     Wait(300)
