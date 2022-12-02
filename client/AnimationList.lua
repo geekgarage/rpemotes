@@ -559,13 +559,13 @@ RP.Shared = {
     ["bdoghumping"] = { -----------------------------DOG HUMP
         "creatures@rottweiler@amb@",
         "hump_loop_chop",
-        "Dog Humping (Male)",
+        "Dogs Humping (Male)",
         "bdoghumping2",
         AnimationOptions = {
             EmoteMoving = false,
             EmoteLoop = true,
             SyncOffsetFront = 0.0,
-            SyncOffsetSide = -0.025,
+            SyncOffsetSide = -0.028,
             SyncOffsetHeading = 0.0
         },
         AdultAnimation = true
@@ -573,13 +573,13 @@ RP.Shared = {
     ["bdoghumping2"] = { -----------------------------DOG HUMP
         "creatures@rottweiler@amb@",
         "hump_loop_ladydog",
-        "Dog Humping (Female)",
+        "Dogs Humping (Female)",
         "bdoghumping",
         AnimationOptions = {
             EmoteMoving = false,
             EmoteLoop = true,
             SyncOffsetFront = 0.0,
-            SyncOffsetSide = -0.025,
+            SyncOffsetSide = -0.028,
             SyncOffsetHeading = 0.0
         },
         AdultAnimation = true
