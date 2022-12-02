@@ -556,6 +556,26 @@ RP.Shared = {
             EmoteDuration = 3000
         }
     },
+    ["sdoghumping"] = { -----------------------------DOG HUMP
+        "creatures@rottweiler@amb@",
+        "hump_loop_chop",
+        "Dog Humping (Male)",
+        "sdoghumping2",
+        AnimationOptions = {
+            EmoteMoving = false,
+            EmoteLoop = true
+        }
+    },
+    ["sdoghumping2"] = { -----------------------------DOG HUMP
+        "creatures@rottweiler@amb@",
+        "hump_loop_ladydog",
+        "Dog Humping (Female)",
+        "sdoghumping",
+        AnimationOptions = {
+            EmoteMoving = false,
+            EmoteLoop = true
+        }
+    },
     ["hug"] = {
         "mp_ped_interaction",
         "kisses_guy_a",
@@ -2976,10 +2996,19 @@ RP.AnimalEmotes = {
             EmoteLoop = true
         }
     },
-    ["bdoghump"] = {
+    ["bdogfhump"] = {
+        "creatures@rottweiler@amb@",
+        "hump_loop_ladydog",
+        "Female Hump (big dog)",
+        AnimationOptions = {
+            EmoteLoop = true
+        },
+        AdultAnimation = true
+    }, 
+    ["bdogmhump"] = {
         "creatures@rottweiler@amb@",
         "hump_loop_chop",
-        "Hump (big dog)",
+        "Male Hump (big dog)",
         AnimationOptions = {
             EmoteLoop = true
         },
