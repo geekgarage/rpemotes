@@ -172,7 +172,7 @@ function AddEmoteMenu(menu)
                     print(c)
                     if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
                         b = d
-                        print("PED: " #b)
+                        print("PED: " .. #b)
                         break
                     else
                         print("Unknown model structure!")
@@ -181,7 +181,7 @@ function AddEmoteMenu(menu)
                 end
                 if #b == 0 then
                     b = b.default)
-                    print("Default: " #b)
+                    print("Default: " .. #b)
                 end
             end
             x, y, z, otheremotename = table.unpack(b)
