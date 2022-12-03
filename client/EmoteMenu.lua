@@ -93,13 +93,11 @@ function AddEmoteMenu(menu)
     end
     local propmenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['propemotes'], "", "", Menuthing, Menuthing)
     table.insert(EmoteTable, Config.Languages[lang]['danceemotes'])
-    table.insert(EmoteTable, Config.Languages[lang]['danceemotes'])
+    table.insert(EmoteTable, Config.Languages[lang]['danceemotes'])   -- Add two elements as offset
 
     if Config.SharedEmotesEnabled then
-        sharemenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['shareemotes'],
-            Config.Languages[lang]['shareemotesinfo'], "", Menuthing, Menuthing)
-        shareddancemenu = _menuPool:AddSubMenu(sharemenu, Config.Languages[lang]['sharedanceemotes'], "", "", Menuthing,
-            Menuthing)
+        sharemenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['shareemotes'], Config.Languages[lang]['shareemotesinfo'], "", Menuthing, Menuthing)
+        shareddancemenu = _menuPool:AddSubMenu(sharemenu, Config.Languages[lang]['sharedanceemotes'], "", "", Menuthing, Menuthing)
         table.insert(ShareTable, 'none')
         table.insert(EmoteTable, Config.Languages[lang]['shareemotes'])
     end
@@ -162,6 +160,11 @@ function AddEmoteMenu(menu)
 
     if Config.SharedEmotesEnabled then
         for a, b in pairsByKeys(RP.Shared) do
+            -- pseudo code
+            -- get player PED model name
+            -- check if current value b is default
+            -- if not "default" and value b matches current player model
+            -- then x, y, z, otheremotename = table.unpack(b)
             x, y, z, otheremotename = table.unpack(b)
             if otheremotename == nil then
                 shareitem = NativeUI.CreateItem(z, "/nearby (~g~" .. a .. "~w~)")

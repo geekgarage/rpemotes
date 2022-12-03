@@ -535,55 +535,31 @@ RP.Shared = {
     -- Emotes will work with either SyncOffset or Attachto. We can attach players either in front of us, to a specific bone, or either side of us. --
 	
 	
-    ["handshake"] = {
-        "mp_ped_interaction",
-        "handshake_guy_a",
-        "Handshake",
-        "handshake2",
-        AnimationOptions = {
-            EmoteMoving = true,
-            EmoteDuration = 3000,
-            SyncOffsetFront = 0.9
-        }
-    },
-    ["handshake2"] = {
-        "mp_ped_interaction",
-        "handshake_guy_b",
-        "Handshake 2",
-        "handshake",
-        AnimationOptions = {
-            EmoteMoving = true,
-            EmoteDuration = 3000
-        }
-    },
-    ["bdoghumping"] = { -----------------------------DOG HUMP
-        "creatures@rottweiler@amb@",
-        "hump_loop_chop",
-        "Dog Humping (Male)",
-        "bdoghumping2",
-        AnimationOptions = {
-            EmoteMoving = false,
-            EmoteLoop = true,
-            SyncOffsetFront = 0.0,
-            SyncOffsetSide = -0.025,
-            SyncOffsetHeading = 0.0
-        },
-        AdultAnimation = true
-    },
-    ["bdoghumping2"] = { -----------------------------DOG HUMP
-        "creatures@rottweiler@amb@",
-        "hump_loop_ladydog",
-        "Dog Humping (Female)",
-        "bdoghumping",
-        AnimationOptions = {
-            EmoteMoving = false,
-            EmoteLoop = true,
-            SyncOffsetFront = 0.0,
-            SyncOffsetSide = -0.025,
-            SyncOffsetHeading = 0.0
-        },
-        AdultAnimation = true
-    },
+--    ["handshake"] = {
+--		["default"] = {
+--			"mp_ped_interaction",
+--			"handshake_guy_a",
+--			"Handshake",
+--			"handshake2",
+--			AnimationOptions = {
+--				EmoteMoving = true,
+--				EmoteDuration = 3000,
+--				SyncOffsetFront = 0.9
+--			}
+--		}
+--    },
+--    ["handshake2"] = {
+--		["default"] = {
+--			"mp_ped_interaction",
+--			"handshake_guy_b",
+--			"Handshake 2",
+--			"handshake",
+--			AnimationOptions = {
+--				EmoteMoving = true,
+--				EmoteDuration = 3000
+--			}
+--		}
+--    },
     ["hug"] = {
         "mp_ped_interaction",
         "kisses_guy_a",
@@ -1571,6 +1547,34 @@ RP.Shared = {
             EmoteLoop = true
         }
     },
+    ["bdoghumping"] = {
+        "creatures@rottweiler@amb@",
+        "hump_loop_chop",
+        "Dogs Humping (Male)",
+        "bdoghumping2",
+        AnimationOptions = {
+            EmoteMoving = false,
+            EmoteLoop = true,
+            SyncOffsetFront = 0.0,
+            SyncOffsetSide = -0.028,
+            SyncOffsetHeading = 0.0
+        },
+        AdultAnimation = true
+    },
+    ["bdoghumping2"] = {
+        "creatures@rottweiler@amb@",
+        "hump_loop_ladydog",
+        "Dogs Humping (Female)",
+        "bdoghumping",
+        AnimationOptions = {
+            EmoteMoving = false,
+            EmoteLoop = true,
+            SyncOffsetFront = 0.0,
+            SyncOffsetSide = -0.028,
+            SyncOffsetHeading = 0.0
+        },
+        AdultAnimation = true
+    }
 }
 
 --- DANCING EMOTES, SOME WITH PROPS ---
@@ -3021,7 +3025,7 @@ RP.AnimalEmotes = {
             EmoteLoop = true
         },
         AdultAnimation = true
-    },    
+    },
     ["bdogdump"] = {
         "creatures@rottweiler@move",
         "dump_loop",
