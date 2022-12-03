@@ -180,8 +180,13 @@ function AddEmoteMenu(menu)
             if b.default ~= nil then
                 for c, d in pairs(b) do
                     print(c, d)
-                    --print(#c)
-                    --print(#d)
+                    if type(d) == table and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
+                        b = d
+                        break
+                    end
+                end
+                if #b == 0 then
+                    b = b.default
                 end
             end
             -- END - Check for specific model AnimationOptions --
