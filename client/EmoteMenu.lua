@@ -169,13 +169,13 @@ function AddEmoteMenu(menu)
             print(b)
             x, y, z, otheremotename = table.unpack(b)
             if x ~= nil then
-                print("x": .. x)
+                print("x: " .. x)
             end
             if y ~= nil then
-                print("y": .. y)
+                print("y: " .. y)
             end
             if z ~= nil then
-                print("z": .. z)
+                print("z: " .. z)
             end
             if otheremotename == nil then
                 shareitem = NativeUI.CreateItem(z, "/nearby (~g~" .. a .. "~w~)")
