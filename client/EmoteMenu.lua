@@ -172,7 +172,7 @@ function AddEmoteMenu(menu)
             print("EMOTE: " .. a .. " : " .. #b)
             if #b == 0 then
                 --print(type(b))
-                for c, d in b do
+                for c, d in pairs(b) do
                     print("PED Model: " .. c) -- .. " : " .. #d)
                 end
             end
