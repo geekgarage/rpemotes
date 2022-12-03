@@ -160,10 +160,10 @@ function AddEmoteMenu(menu)
 
     if Config.SharedEmotesEnabled then
         local ped = GetPlayerPed(-1)
-        local pedhash = GetHashKey('a_c_shepherd')
-        print(ped)
-        print(PlayerPedId())
-        print(pedhash)
+        local pedhash = GetHashKey('a_c_westy')
+        print("Player to hash: " .. ped)
+        print("Player to hash: " .. PlayerPedId())
+        print("Model to hash: " .. pedhash)
         for a, b in pairsByKeys(RP.Shared) do
             -- pseudo code
             -- get player PED model name
