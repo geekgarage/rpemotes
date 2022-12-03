@@ -1548,12 +1548,14 @@ RP.Shared = {
         "hump_loop_chop",
         "Dogs Humping (Male)",
         "bdoghumping2",
-        AnimationOptions = {
-            EmoteMoving = false,
-            EmoteLoop = true,
-            SyncOffsetFront = 0.0,
-            SyncOffsetSide = -0.028,
-            SyncOffsetHeading = 0.0
+        ["default"] = {
+            AnimationOptions = {
+                EmoteMoving = false,
+                EmoteLoop = true,
+                SyncOffsetFront = 0.0,
+                SyncOffsetSide = -0.028,
+                SyncOffsetHeading = 0.0
+            },
         },
         AdultAnimation = true
     },
@@ -1562,12 +1564,14 @@ RP.Shared = {
         "hump_loop_ladydog",
         "Dogs Humping (Female)",
         "bdoghumping",
-        AnimationOptions = {
-            EmoteMoving = false,
-            EmoteLoop = true,
-            SyncOffsetFront = 0.0,
-            SyncOffsetSide = -0.028,
-            SyncOffsetHeading = 0.0
+        ["default"] = {
+            AnimationOptions = {
+                EmoteMoving = false,
+                EmoteLoop = true,
+                SyncOffsetFront = 0.0,
+                SyncOffsetSide = -0.028,
+                SyncOffsetHeading = 0.0
+            },
         },
         AdultAnimation = true
     }
