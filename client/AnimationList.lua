@@ -535,31 +535,31 @@ RP.Shared = {
     -- Emotes will work with either SyncOffset or Attachto. We can attach players either in front of us, to a specific bone, or either side of us. --
 	
 	
---    ["handshake"] = {
---		["default"] = {
---			"mp_ped_interaction",
---			"handshake_guy_a",
---			"Handshake",
---			"handshake2",
---			AnimationOptions = {
---				EmoteMoving = true,
---				EmoteDuration = 3000,
---				SyncOffsetFront = 0.9
---			}
---		}
---    },
---    ["handshake2"] = {
---		["default"] = {
---			"mp_ped_interaction",
---			"handshake_guy_b",
---			"Handshake 2",
---			"handshake",
---			AnimationOptions = {
---				EmoteMoving = true,
---				EmoteDuration = 3000
---			}
---		}
---    },
+    ["handshake"] = {
+		["default"] = {
+			"mp_ped_interaction",
+			"handshake_guy_a",
+			"Handshake",
+			"handshake2",
+			AnimationOptions = {
+				EmoteMoving = true,
+				EmoteDuration = 3000,
+				SyncOffsetFront = 0.9
+			}
+		}
+    },
+    ["handshake2"] = {
+		["default"] = {
+			"mp_ped_interaction",
+			"handshake_guy_b",
+			"Handshake 2",
+			"handshake",
+			AnimationOptions = {
+				EmoteMoving = true,
+				EmoteDuration = 3000
+			}
+		}
+    },
     ["hug"] = {
         "mp_ped_interaction",
         "kisses_guy_a",
