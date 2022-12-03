@@ -160,7 +160,9 @@ function AddEmoteMenu(menu)
 
     if Config.SharedEmotesEnabled then
         local ped = GetPlayerPed(-1)
+        local pedhash = GetHashKey('ig_geek')
         print(ped)
+        print(PlayerPedId())
         for a, b in pairsByKeys(RP.Shared) do
             -- pseudo code
             -- get player PED model name
