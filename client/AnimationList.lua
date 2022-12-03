@@ -765,7 +765,7 @@ RP.Shared = {
                 EmoteLoop = true,
                 SyncOffsetFront = 0.50
             },
-        }
+        },
         AdultAnimation = true
     },
     ["streetsexfemale"] = {
@@ -779,7 +779,7 @@ RP.Shared = {
                 EmoteLoop = true,
                 SyncOffsetFront = 0.50
             },
-        }
+        },
         AdultAnimation = true
     },
     ["carry"] = {
