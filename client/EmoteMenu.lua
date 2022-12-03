@@ -174,21 +174,17 @@ function AddEmoteMenu(menu)
                         b = d
                         print("PED: " .. #b)
                         break
-                    else
-                        print("Unknown model structure!")
-                        break
                     end
                 end
-                if #b == 0 then
+                if b.default and #b == 0 then
                     b = b.default
                     print("Default: " .. #b)
+                else
+                    print("'default' profile is missing. Please add a default profile to '" .. a .. "' emote")
                 end
             end
+
             x, y, z, otheremotename = table.unpack(b)
-            
-        --    if x == nil then
-        --        print("x: " .. x)
-        --    end
             
             if otheremotename == nil then
                 shareitem = NativeUI.CreateItem(z, "/nearby (~g~" .. a .. "~w~)")
