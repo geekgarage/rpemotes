@@ -181,7 +181,7 @@ function AddEmoteMenu(menu)
                 local PedFound = false
                 for c, d in pairs(b) do
                     print(c, d)
-                    if type(d) == table and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
+                    if type(d) == 'table' and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
                         print("PED: Found Match " .. c)
                         PedFound = true
                         b = d
