@@ -159,7 +159,7 @@ function AddEmoteMenu(menu)
     end
 
     if Config.SharedEmotesEnabled then
-        print(GetEntityModel("ig_geek == " .. GetHashKey('ig_geek'))
+        print("ig_geek == " .. GetHashKey('ig_geek'))
         for a, b in pairsByKeys(RP.Shared) do
             -- pseudo code
             -- get player PED model name
