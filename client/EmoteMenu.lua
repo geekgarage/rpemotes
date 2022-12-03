@@ -172,7 +172,7 @@ function AddEmoteMenu(menu)
                     print(c)
                     if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
                         print("PED Model: " .. c .. " : " .. #d)
-                    elseif c == "default"
+                    elseif c == "default" then
                         print("Default Model: " .. c .. " : " .. #d)
                     else
                         print("Unknown model structure!")
