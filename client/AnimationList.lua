@@ -1557,6 +1557,24 @@ RP.Shared = {
                 SyncOffsetHeading = 0.0
             },
         },
+        ["A_C_HUSKY"] = {
+            AnimationOptions = {
+                EmoteMoving = false,
+                EmoteLoop = true,
+                SyncOffsetFront = 0.0,
+                SyncOffsetSide = -0.028,
+                SyncOffsetHeading = 0.0
+            },
+        },
+        ["IG_GEEK"] = {
+            AnimationOptions = {
+                EmoteMoving = false,
+                EmoteLoop = true,
+                SyncOffsetFront = 0.0,
+                SyncOffsetSide = -0.028,
+                SyncOffsetHeading = 0.0
+            },
+        },
         AdultAnimation = true
     },
     ["doghumping2"] = {
@@ -1564,7 +1582,25 @@ RP.Shared = {
         "hump_loop_ladydog",
         "Dogs Humping (Female)",
         "bdoghumping",
+        ["ig_geek"] = {
+            AnimationOptions = {
+                EmoteMoving = false,
+                EmoteLoop = true,
+                SyncOffsetFront = 0.0,
+                SyncOffsetSide = -0.028,
+                SyncOffsetHeading = 0.0
+            },
+        },
         ["default"] = {
+            AnimationOptions = {
+                EmoteMoving = false,
+                EmoteLoop = true,
+                SyncOffsetFront = 0.0,
+                SyncOffsetSide = -0.028,
+                SyncOffsetHeading = 0.0
+            },
+        },
+        ["a_c_husky"] = {
             AnimationOptions = {
                 EmoteMoving = false,
                 EmoteLoop = true,
