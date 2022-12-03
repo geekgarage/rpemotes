@@ -755,56 +755,28 @@ RP.Shared = {
         AdultAnimation = true
     },
     ["streetsexmale"] = {
-        ["ig_geek"] = {
-            "misscarsteal2pimpsex",
-            "shagloop_hooker",
-            "Street Sex Female",
-            "streetsexmale",
-            AnimationOptions = {
-                EmoteMoving = false,
-                EmoteLoop = true,
-                SyncOffsetFront = 0.50
-            },
-            AdultAnimation = true
+        "misscarsteal2pimpsex",
+        "shagloop_pimp",
+        "Street Sex Male",
+        "streetsexfemale",
+        AnimationOptions = {
+            EmoteMoving = false,
+            EmoteLoop = true,
+            SyncOffsetFront = 0.50
         },
-        ["default"] = {
-            "misscarsteal2pimpsex",
-            "shagloop_hooker",
-            "Street Sex Female",
-            "streetsexmale",
-            AnimationOptions = {
-                EmoteMoving = false,
-                EmoteLoop = true,
-                SyncOffsetFront = 0.50
-            },
-            AdultAnimation = true
-        },
+        AdultAnimation = true
     },
     ["streetsexfemale"] = {
-        ["ig_geek"] = {
-            "misscarsteal2pimpsex",
-            "shagloop_hooker",
-            "Street Sex Female",
-            "streetsexmale",
-            AnimationOptions = {
-                EmoteMoving = false,
-                EmoteLoop = true,
-                SyncOffsetFront = 0.50
-            },
-            AdultAnimation = true
+        "misscarsteal2pimpsex",
+        "shagloop_hooker",
+        "Street Sex Female",
+        "streetsexmale",
+        AnimationOptions = {
+            EmoteMoving = false,
+            EmoteLoop = true,
+            SyncOffsetFront = 0.50
         },
-        ["default"] = {
-            "misscarsteal2pimpsex",
-            "shagloop_hooker",
-            "Street Sex Female",
-            "streetsexmale",
-            AnimationOptions = {
-                EmoteMoving = false,
-                EmoteLoop = true,
-                SyncOffsetFront = 0.50
-            },
-            AdultAnimation = true
-        },
+        AdultAnimation = true
     },
     ["carry"] = {
         "missfinale_c2mcs_1",
@@ -1571,7 +1543,7 @@ RP.Shared = {
             EmoteLoop = true
         }
     },
-    ["bdoghumping"] = {
+    ["doghumping"] = {
         "creatures@rottweiler@amb@",
         "hump_loop_chop",
         "Dogs Humping (Male)",
@@ -1585,7 +1557,7 @@ RP.Shared = {
         },
         AdultAnimation = true
     },
-    ["bdoghumping2"] = {
+    ["doghumping2"] = {
         "creatures@rottweiler@amb@",
         "hump_loop_ladydog",
         "Dogs Humping (Female)",
