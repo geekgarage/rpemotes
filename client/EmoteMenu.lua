@@ -176,6 +176,7 @@ function AddEmoteMenu(menu)
             --        b = b.default
             --    end
             --end
+            print(a)
             if b.default ~= nil then
                 for c, d in pairs(b) do
                     print(c)
