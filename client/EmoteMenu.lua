@@ -159,6 +159,8 @@ function AddEmoteMenu(menu)
     end
 
     if Config.SharedEmotesEnabled then
+        local ped = GetPlayerPed(-1)
+        print(ped)
         for a, b in pairsByKeys(RP.Shared) do
             -- pseudo code
             -- get player PED model name
@@ -167,18 +169,11 @@ function AddEmoteMenu(menu)
             -- then x, y, z, otheremotename = table.unpack(b)
             print("EMOTE: " .. a)
             x, y, z, otheremotename = table.unpack(b)
-            if x ~= nil then
+            
+            if x == nil then
                 print("x: " .. x)
             end
-            if y ~= nil then
-                print("y: " .. y)
-            end
-            if z ~= nil then
-                print("z: " .. z)
-            end
-            if otheremotename ~= nil then
-                print("otheremotename: " .. otheremotename)
-            end
+            
             if otheremotename == nil then
                 shareitem = NativeUI.CreateItem(z, "/nearby (~g~" .. a .. "~w~)")
             else
