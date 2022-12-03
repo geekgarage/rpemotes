@@ -767,9 +767,7 @@ RP.Shared = {
             },
             AdultAnimation = true
         },
-    },
-    ["streetsexfemale"] = {
-        ["ig_geek"] = {
+        ["default"] = {
             "misscarsteal2pimpsex",
             "shagloop_hooker",
             "Street Sex Female",
@@ -781,7 +779,9 @@ RP.Shared = {
             },
             AdultAnimation = true
         },
-        ["default"] = {
+    },
+    ["streetsexfemale"] = {
+        ["ig_geek"] = {
             "misscarsteal2pimpsex",
             "shagloop_hooker",
             "Street Sex Female",
