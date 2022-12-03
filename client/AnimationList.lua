@@ -793,6 +793,18 @@ RP.Shared = {
             },
             AdultAnimation = true
         },
+        ["default"] = {
+            "misscarsteal2pimpsex",
+            "shagloop_hooker",
+            "Street Sex Female",
+            "streetsexmale",
+            AnimationOptions = {
+                EmoteMoving = false,
+                EmoteLoop = true,
+                SyncOffsetFront = 0.50
+            },
+            AdultAnimation = true
+        },
     },
     ["carry"] = {
         "missfinale_c2mcs_1",
