@@ -178,15 +178,17 @@ function AddEmoteMenu(menu)
             --end
             print(a)
             if b.default ~= nil then
+                local PedFound = false
                 for c, d in pairs(b) do
                     print(c, d)
                     if type(d) == table and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
                         print("PED: Found Match " .. c)
+                        PedFound = true
                         b = d
                         break
                     end
                 end
-                if #b == 0 then
+                if not PedFound then
                     print("Default selected")
                     b = b.default
                 end
