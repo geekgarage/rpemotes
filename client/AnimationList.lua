@@ -755,7 +755,7 @@ RP.Shared = {
         AdultAnimation = true
     },
     ["streetsexmale"] = {
-		default = {
+		["default"] = {
             "misscarsteal2pimpsex",
             "shagloop_pimp",
             "Street Sex Male",
@@ -769,7 +769,7 @@ RP.Shared = {
         AdultAnimation = true
     },
     ["streetsexfemale"] = {
-		default = {
+		["default"] = {
             "misscarsteal2pimpsex",
             "shagloop_hooker",
             "Street Sex Female",
