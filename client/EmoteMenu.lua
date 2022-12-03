@@ -181,11 +181,13 @@ function AddEmoteMenu(menu)
                 for c, d in pairs(b) do
                     print(c, d)
                     if type(d) == table and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
+                        print("PED: Found Match " .. c)
                         b = d
                         break
                     end
                 end
                 if #b == 0 then
+                    print("Default selected")
                     b = b.default
                 end
             end
