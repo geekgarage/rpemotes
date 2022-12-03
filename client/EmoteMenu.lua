@@ -170,6 +170,11 @@ function AddEmoteMenu(menu)
             -- if not "default" and value b matches current player model
             -- then x, y, z, otheremotename = table.unpack(b)
             print("EMOTE: " .. a .. " : " .. #b)
+            if #b == 0 then
+                for c, d in pairsByKeys(b) do
+                    print("EMOTE: " .. a .. " : " .. #b)
+                end
+            end
             x, y, z, otheremotename = table.unpack(b)
             
         --    if x == nil then
