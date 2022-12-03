@@ -180,7 +180,7 @@ function AddEmoteMenu(menu)
                     end
                 end
                 if #b == 0 then
-                    b = b.default)
+                    b = b.default
                     print("Default: " .. #b)
                 end
             end
