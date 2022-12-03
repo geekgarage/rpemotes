@@ -171,10 +171,10 @@ function AddEmoteMenu(menu)
             -- then x, y, z, otheremotename = table.unpack(b)
             print("EMOTE: " .. a .. " : " .. #b)
             if #b == 0 then
-                print(type(b))
-                --for c, d in b do
-                --    print("EMOTE: " .. c .. " : " .. #d)
-                --end
+                --print(type(b))
+                for c, d in b do
+                    print("PED Model: " .. c) -- .. " : " .. #d)
+                end
             end
             x, y, z, otheremotename = table.unpack(b)
             
