@@ -163,6 +163,7 @@ function AddEmoteMenu(menu)
         local pedhash = GetHashKey('ig_geek')
         print(ped)
         print(PlayerPedId())
+        print(pedhash)
         for a, b in pairsByKeys(RP.Shared) do
             -- pseudo code
             -- get player PED model name
