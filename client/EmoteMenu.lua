@@ -162,18 +162,26 @@ function AddEmoteMenu(menu)
         for a, b in pairsByKeys(RP.Shared) do
 
             -- START - Check for specific model AnimationOptions
-            if #b == 0 then
-                if b.default == nil then
-                    print("[\"default\"] profile is missing. Please add a [\"default\"] profile to [\"" .. a .. "\"] shared emote")
-                end
+            --if #b == 0 then
+            --    if b.default == nil then
+            --        print("[\"default\"] profile is missing. Please add a [\"default\"] profile to [\"" .. a .. "\"] shared emote")
+            --    end
+            --    for c, d in pairs(b) do
+            --        if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
+            --            b = d
+            --            break
+            --        end
+            --    end
+            --    if b.default ~= nil and #b == 0 then
+            --        b = b.default
+            --    end
+            --end
+            if b.default ~= nil then
                 for c, d in pairs(b) do
-                    if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
-                        b = d
-                        break
-                    end
-                end
-                if b.default ~= nil and #b == 0 then
-                    b = b.default
+                    print(c)
+                    print(#c)
+                    print(d)
+                    print(#d)
                 end
             end
             -- END - Check for specific model AnimationOptions --
