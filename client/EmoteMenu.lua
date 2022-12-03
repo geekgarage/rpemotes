@@ -165,7 +165,7 @@ function AddEmoteMenu(menu)
             -- check if current value b is default
             -- if not "default" and value b matches current player model
             -- then x, y, z, otheremotename = table.unpack(b)
-            if b ~= nil then
+            if a ~= nil then
                 print(b.tostring)
             end
             x, y, z, otheremotename = table.unpack(b)
