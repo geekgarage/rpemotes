@@ -754,34 +754,34 @@ RP.Shared = {
         },
         AdultAnimation = true
     },
---    ["streetsexmale"] = {
--- 		default = {
---            "misscarsteal2pimpsex",
---            "shagloop_pimp",
---            "Street Sex Male",
---            "streetsexfemale",
---            AnimationOptions = {
---                EmoteMoving = false,
---                EmoteLoop = true,
---                SyncOffsetFront = 0.50
---            },
---        },
---        AdultAnimation = true
---    },
---    ["streetsexfemale"] = {
--- 		default = {
---            "misscarsteal2pimpsex",
---            "shagloop_hooker",
---            "Street Sex Female",
---            "streetsexmale",
---            AnimationOptions = {
---                EmoteMoving = false,
---                EmoteLoop = true,
---                SyncOffsetFront = 0.50
---            },
---        },
---        AdultAnimation = true
---    },
+    ["streetsexmale"] = {
+ 		default = {
+            "misscarsteal2pimpsex",
+            "shagloop_pimp",
+            "Street Sex Male",
+            "streetsexfemale",
+            AnimationOptions = {
+                EmoteMoving = false,
+                EmoteLoop = true,
+                SyncOffsetFront = 0.50
+            },
+        },
+        AdultAnimation = true
+    },
+    ["streetsexfemale"] = {
+ 		default = {
+            "misscarsteal2pimpsex",
+            "shagloop_hooker",
+            "Street Sex Female",
+            "streetsexmale",
+            AnimationOptions = {
+                EmoteMoving = false,
+                EmoteLoop = true,
+                SyncOffsetFront = 0.50
+            },
+        },
+        AdultAnimation = true
+    },
     ["carry"] = {
         "missfinale_c2mcs_1",
         "fin_c2_mcs_1_camman",
