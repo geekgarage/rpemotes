@@ -181,7 +181,7 @@ function AddEmoteMenu(menu)
                 for c, d in pairs(b) do
                     print(c)
                     --print(#c)
-                    --print(d)
+                    print(d)
                     --print(#d)
                 end
             end
