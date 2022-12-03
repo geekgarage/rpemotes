@@ -1564,7 +1564,7 @@ RP.Shared = {
         "hump_loop_ladydog",
         "Dogs Humping (Female)",
         "bdoghumping",
-        ["default"] = {
+        "default" = {
             AnimationOptions = {
                 EmoteMoving = false,
                 EmoteLoop = true,
