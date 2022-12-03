@@ -159,10 +159,9 @@ function AddEmoteMenu(menu)
     end
 
     if Config.SharedEmotesEnabled then
-        local ped = GetPlayerPed(-1)
+        local ped = GetEntityModel(PlayerPedId())
         local pedhash = GetHashKey('a_c_westy')
         print("Player to hash: " .. ped)
-        print("Player to hash: " .. PlayerPedId())
         print("Model to hash: " .. pedhash)
         for a, b in pairsByKeys(RP.Shared) do
             -- pseudo code
@@ -170,12 +169,12 @@ function AddEmoteMenu(menu)
             -- check if current value b is default
             -- if not "default" and value b matches current player model
             -- then x, y, z, otheremotename = table.unpack(b)
-            print("EMOTE: " .. a)
+            --print("EMOTE: " .. a)
             x, y, z, otheremotename = table.unpack(b)
             
-            if x == nil then
-                print("x: " .. x)
-            end
+        --    if x == nil then
+        --        print("x: " .. x)
+        --    end
             
             if otheremotename == nil then
                 shareitem = NativeUI.CreateItem(z, "/nearby (~g~" .. a .. "~w~)")
