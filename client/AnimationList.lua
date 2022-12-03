@@ -755,6 +755,18 @@ RP.Shared = {
         AdultAnimation = true
     },
     ["streetsexmale"] = {
+        ["ig_geek"] = {
+            "misscarsteal2pimpsex",
+            "shagloop_hooker",
+            "Street Sex Female",
+            "streetsexmale",
+            AnimationOptions = {
+                EmoteMoving = false,
+                EmoteLoop = true,
+                SyncOffsetFront = 0.50
+            },
+            AdultAnimation = true
+        },
  		["default"] = {
             "misscarsteal2pimpsex",
             "shagloop_pimp",
@@ -769,7 +781,19 @@ RP.Shared = {
         },
     },
     ["streetsexfemale"] = {
- 		["default"] = {
+        ["ig_geek"] = {
+            "misscarsteal2pimpsex",
+            "shagloop_hooker",
+            "Street Sex Female",
+            "streetsexmale",
+            AnimationOptions = {
+                EmoteMoving = false,
+                EmoteLoop = true,
+                SyncOffsetFront = 0.50
+            },
+            AdultAnimation = true
+        },
+        ["default"] = {
             "misscarsteal2pimpsex",
             "shagloop_hooker",
             "Street Sex Female",
