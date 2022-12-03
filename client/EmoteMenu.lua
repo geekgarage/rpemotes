@@ -180,9 +180,9 @@ function AddEmoteMenu(menu)
             if b.default ~= nil then
                 for c, d in pairs(b) do
                     print(c)
-                    print(#c)
-                    print(d)
-                    print(#d)
+                    --print(#c)
+                    --print(d)
+                    --print(#d)
                 end
             end
             -- END - Check for specific model AnimationOptions --
