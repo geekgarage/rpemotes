@@ -165,10 +165,17 @@ function AddEmoteMenu(menu)
             -- check if current value b is default
             -- if not "default" and value b matches current player model
             -- then x, y, z, otheremotename = table.unpack(b)
-            if a ~= nil then
-                print(b)
-            end
+            print("EMOTE: " .. a)
             x, y, z, otheremotename = table.unpack(b)
+            if x ~= nil then
+                print(x)
+            end
+            if y ~= nil then
+                print(y)
+            end
+            if z ~= nil then
+                print(z)
+            end
             if otheremotename == nil then
                 shareitem = NativeUI.CreateItem(z, "/nearby (~g~" .. a .. "~w~)")
             else
