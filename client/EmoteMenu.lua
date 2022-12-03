@@ -168,7 +168,7 @@ function AddEmoteMenu(menu)
             -- then x, y, z, otheremotename = table.unpack(b)
             -- print("EMOTE: " .. a .. " : " .. #b)
             if #b == 0 then
-                for c in pairs(b) do
+                for c, d in pairs(b) do
                     print(c)
                     if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
                         print("PED Model: " .. c .. " : " .. #d)
