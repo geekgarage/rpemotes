@@ -166,7 +166,7 @@ function AddEmoteMenu(menu)
             -- if not "default" and value b matches current player model
             -- then x, y, z, otheremotename = table.unpack(b)
             print("DEBUG START")
-            print(RP.Shared[a].tostring)
+            print(b.tostring)
             print("DEBUG STOP")
             x, y, z, otheremotename = table.unpack(b)
             if otheremotename == nil then
