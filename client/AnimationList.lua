@@ -765,8 +765,8 @@ RP.Shared = {
                 EmoteLoop = true,
                 SyncOffsetFront = 0.50
             },
+            AdultAnimation = true
         },
-        AdultAnimation = true
     },
     ["streetsexfemale"] = {
  		["default"] = {
@@ -779,8 +779,8 @@ RP.Shared = {
                 EmoteLoop = true,
                 SyncOffsetFront = 0.50
             },
+            AdultAnimation = true
         },
-        AdultAnimation = true
     },
     ["carry"] = {
         "missfinale_c2mcs_1",
