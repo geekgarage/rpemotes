@@ -767,18 +767,6 @@ RP.Shared = {
             },
             AdultAnimation = true
         },
- 		["default"] = {
-            "misscarsteal2pimpsex",
-            "shagloop_pimp",
-            "Street Sex Male",
-            "streetsexfemale",
-            AnimationOptions = {
-                EmoteMoving = false,
-                EmoteLoop = true,
-                SyncOffsetFront = 0.50
-            },
-            AdultAnimation = true
-        },
     },
     ["streetsexfemale"] = {
         ["ig_geek"] = {

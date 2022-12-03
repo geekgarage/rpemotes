@@ -179,7 +179,7 @@ function AddEmoteMenu(menu)
                 if b.default and #b == 0 then
                     b = b.default
                     print("Default: " .. #b)
-                elseif not b.default then
+                elseif b.default then
                     print("'default' profile is missing. Please add a default profile to '" .. a .. "' emote")
                 end
             end
