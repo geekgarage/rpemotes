@@ -159,7 +159,6 @@ function AddEmoteMenu(menu)
     end
 
     if Config.SharedEmotesEnabled then
-        print("ig_geek == " .. GetHashKey('ig_geek'))
         for a, b in pairsByKeys(RP.Shared) do
             -- pseudo code
             -- get player PED model name
@@ -169,13 +168,15 @@ function AddEmoteMenu(menu)
             -- print("EMOTE: " .. a .. " : " .. #b)
             if #b == 0 then
                 for c, d in pairs(b) do
-                    print(c)
                     if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
                         print("PED Model: " .. c .. " : " .. #d)
+                        break
                     elseif c == "default" then
                         print("Default Model: " .. c .. " : " .. #d)
+                        break
                     else
                         print("Unknown model structure!")
+                        break
                     end
                 end
             end
