@@ -172,15 +172,13 @@ function AddEmoteMenu(menu)
                     print(c)
                     if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
                         b = d
-                        print("PED: " .. #b)
                         break
                     end
                 end
-                if b.default and #b == 0 then
+                if b.default ~= nil and #b == 0 then
                     b = b.default
-                    print("Default: " .. #b)
                 elseif b.default == nil then
-                    print("'default' profile is missing. Please add a default profile to '" .. a .. "' emote")
+                    print("[\"default\"] profile is missing. Please add a [\"default\"] profile to [\"" .. a .. "\"] emote")
                 end
             end
 
