@@ -536,7 +536,7 @@ RP.Shared = {
 	
 	
     ["handshake"] = {
-		["default"] = {
+		default = {
 			"mp_ped_interaction",
 			"handshake_guy_a",
 			"Handshake",
@@ -549,7 +549,7 @@ RP.Shared = {
 		}
     },
     ["handshake2"] = {
-		["default"] = {
+		default = {
 			"mp_ped_interaction",
 			"handshake_guy_b",
 			"Handshake 2",
