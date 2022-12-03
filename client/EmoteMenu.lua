@@ -166,11 +166,16 @@ function AddEmoteMenu(menu)
             -- check if current value b is default
             -- if not "default" and value b matches current player model
             -- then x, y, z, otheremotename = table.unpack(b)
-            print("EMOTE: " .. a .. " : " .. #b)
+            -- print("EMOTE: " .. a .. " : " .. #b)
             if #b == 0 then
                 for c in pairs(b) do
+                    print(c)
                     if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
                         print("PED Model: " .. c .. " : " .. #d)
+                    elseif c == "default"
+                        print("Default Model: " .. c .. " : " .. #d)
+                    else
+                        print("Unknown model structure!")
                     end
                 end
             end
