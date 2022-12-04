@@ -14,9 +14,12 @@ if Config.SharedEmotesEnabled then
             local emotename = string.lower(args[1])
             target, distance = GetClosestPlayer()
             if (distance ~= -1 and distance < 3) then
-                print(RP.Shared[emotename])
                 if RP.Shared[emotename] ~= nil then
                     dict, anim, ename = table.unpack(RP.Shared[emotename])
+                    if dict == nil then
+                        -- some code to rectify
+                        dict, anim, ename = table.unpack(MatchPedModelName(RP.Shared[emotename]))
+                    end
                     print(dict, anim, ename)
                     TriggerServerEvent("ServerEmoteRequest", GetPlayerServerId(target), emotename)
                     SimpleNotify(Config.Languages[lang]['sentrequestto'] ..
