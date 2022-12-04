@@ -429,14 +429,14 @@ function MatchPedModelName(b)
         local PedFound = false
         for c, d in pairs(b) do
             if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
-                --print("PED Model: " .. c)
+                DebugPrint("PED Model: " .. c)
                 PedFound = true
                 b = d
                 break
             end
         end
         if not PedFound then
-            --print("Default Selected")
+            DebugPrint("Default Selected")
             b = b.default
         end
     end
