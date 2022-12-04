@@ -151,7 +151,7 @@ AddEventHandler("ClientEmoteRequestReceive", function(emotename, etype)
     if etype == 'Dances' then
         _, _, remote = table.unpack(RP.Dances[requestedemote])
     else
-        _, _, remote = table.unpack(RP.Shared[requestedemote])
+        _, _, remote = table.unpack(MatchPedModelName(RP.Shared[requestedemote])
     end
 
     PlaySound(-1, "NAV", "HUD_AMMO_SHOP_SOUNDSET", 0, 0, 1)
