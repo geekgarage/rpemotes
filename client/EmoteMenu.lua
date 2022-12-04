@@ -308,8 +308,8 @@ if Config.Search then
             for k, v in pairs(RP) do
                 if not ignoredCategories[k] then
                     for a, b in pairs(v) do
-                        print(k)
                         if string.find(string.lower(a), string.lower(input)) or (b[3] ~= nil and string.find(string.lower(b[3]), string.lower(input))) then
+                            print(k, a, b)
                             table.insert(results, {table = k, name = a, data = b})
                         end
                     end
