@@ -330,8 +330,10 @@ if Config.Search then
                 table.sort(results, function(a, b) return a.name < b.name end)
                 for k, v in pairs(results) do
                     local desc = ""
-                    print(v.table)
                     if v.table == "Shared" then
+                        for r, d in pairs(v.table) do
+                            print(r, d)
+                        end
                         local otheremotename = v.data[4]
                         if otheremotename == nil then
                            desc = "/nearby (~g~" .. v.name .. "~w~)"
