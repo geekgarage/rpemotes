@@ -1543,12 +1543,12 @@ RP.Shared = {
             EmoteLoop = true
         }
     },
-    ["doghumping"] = {
+    ["dogshumping"] = {
         ["default"] = {
             "creatures@rottweiler@amb@",
             "hump_loop_chop",
             "Dogs Humping (Male)",
-            "bdoghumping2",
+            "dogshumping2",
             AnimationOptions = {
                 EmoteMoving = false,
                 EmoteLoop = true,
@@ -1562,7 +1562,7 @@ RP.Shared = {
             "creatures@rottweiler@amb@",
             "hump_loop_chop",
             "Dogs Humping (Male)",
-            "bdoghumping2",
+            "dogshumping2",
             AnimationOptions = {
                 EmoteMoving = false,
                 EmoteLoop = true,
@@ -1576,7 +1576,7 @@ RP.Shared = {
             "creatures@rottweiler@amb@",
             "hump_loop_chop",
             "Dogs Humping (Male)",
-            "bdoghumping2",
+            "dogshumping2",
             AnimationOptions = {
                 EmoteMoving = false,
                 EmoteLoop = true,
@@ -1587,12 +1587,12 @@ RP.Shared = {
             AdultAnimation = true
         }
     },
-    ["doghumping2"] = {
+    ["dogshumping2"] = {
         ["a_c_husky"] = {
             "creatures@rottweiler@amb@",
             "hump_loop_ladydog",
             "Dogs Humping (Female)",
-            "bdoghumping",
+            "dogshumping",
             AnimationOptions = {
                 EmoteMoving = false,
                 EmoteLoop = true,
@@ -1606,7 +1606,7 @@ RP.Shared = {
             "creatures@rottweiler@amb@",
             "hump_loop_ladydog",
             "Dogs Humping (Female)",
-            "bdoghumping",
+            "dogshumping",
             AnimationOptions = {
                 EmoteMoving = false,
                 EmoteLoop = true,
@@ -1620,7 +1620,7 @@ RP.Shared = {
             "creatures@rottweiler@amb@",
             "hump_loop_ladydog",
             "Dogs Humping (Female)",
-            "bdoghumping",
+            "dogshumping",
             AnimationOptions = {
                 EmoteMoving = false,
                 EmoteLoop = true,
