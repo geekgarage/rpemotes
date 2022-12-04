@@ -422,10 +422,10 @@ end
 -- This function will fetch sub array data if emotes is defined on PED model name.
 -- It will also check if a default sub array has been defined if other models has been defined
 function MatchPedModelName(b)
-    if b.default == nil and b[1] == nil then
+    if b and b.default == nil and b[1] == nil then
         print("[\"default\"] profile is missing. Please add a [\"default\"] profile to [\"" .. a .. "\"] shared emote")
     end
-    if b.default ~= nil and b[1] == nil then
+    if b and b.default ~= nil and b[1] == nil then
         local PedFound = false
         for c, d in pairs(b) do
             if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
