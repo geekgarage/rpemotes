@@ -152,7 +152,7 @@ AddEventHandler("ClientEmoteRequestReceive", function(emotename, etype)
     isRequestAnim = true
     
     if etype == 'Dances' then
-        requestedemote = MatchPedModelName(RP.Shared[emotename]
+        requestedemote = MatchPedModelName(RP.Shared[emotename])
         _, _, remote = table.unpack(requestedemote)
     else
         requestedemote = MatchPedModelName(RP.Shared[emotename])
