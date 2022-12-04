@@ -16,6 +16,7 @@ if Config.SharedEmotesEnabled then
             if (distance ~= -1 and distance < 3) then
                 if RP.Shared[emotename] ~= nil then
                     dict, anim, ename = table.unpack(RP.Shared[emotename])
+                    print(dict, anim, ename)
                     TriggerServerEvent("ServerEmoteRequest", GetPlayerServerId(target), emotename)
                     SimpleNotify(Config.Languages[lang]['sentrequestto'] ..
                         GetPlayerName(target) .. " ~w~(~g~" .. ename .. "~w~)")
