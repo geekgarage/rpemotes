@@ -1557,7 +1557,7 @@ RP.Shared = {
                 SyncOffsetHeading = 0.0
             },
         },
-        ["A_C_HUSKY"] = {
+        ["a_c_husky"] = {
             AnimationOptions = {
                 EmoteMoving = false,
                 EmoteLoop = true,
@@ -1566,7 +1566,7 @@ RP.Shared = {
                 SyncOffsetHeading = 0.0
             },
         },
-        ["IG_GEEK"] = {
+        ["ig_geek"] = {
             AnimationOptions = {
                 EmoteMoving = false,
                 EmoteLoop = true,
@@ -1578,11 +1578,11 @@ RP.Shared = {
         AdultAnimation = true
     },
     ["doghumping2"] = {
-        "creatures@rottweiler@amb@",
-        "hump_loop_ladydog",
-        "Dogs Humping (Female)",
-        "bdoghumping",
-        ["ig_geek"] = {
+        ["a_c_husky"] = {
+            "creatures@rottweiler@amb@",
+            "hump_loop_ladydog",
+            "Dogs Humping (Female)",
+            "bdoghumping",
             AnimationOptions = {
                 EmoteMoving = false,
                 EmoteLoop = true,
@@ -1590,8 +1590,13 @@ RP.Shared = {
                 SyncOffsetSide = -0.028,
                 SyncOffsetHeading = 0.0
             },
+            AdultAnimation = true
         },
         ["default"] = {
+            "creatures@rottweiler@amb@",
+            "hump_loop_ladydog",
+            "Dogs Humping (Female)",
+            "bdoghumping",
             AnimationOptions = {
                 EmoteMoving = false,
                 EmoteLoop = true,
@@ -1599,8 +1604,13 @@ RP.Shared = {
                 SyncOffsetSide = -0.028,
                 SyncOffsetHeading = 0.0
             },
+            AdultAnimation = true
         },
-        ["a_c_husky"] = {
+        ["ig_geek"] = {
+            "creatures@rottweiler@amb@",
+            "hump_loop_ladydog",
+            "Dogs Humping (Female)",
+            "bdoghumping",
             AnimationOptions = {
                 EmoteMoving = false,
                 EmoteLoop = true,
@@ -1608,8 +1618,8 @@ RP.Shared = {
                 SyncOffsetSide = -0.028,
                 SyncOffsetHeading = 0.0
             },
-        },
-        AdultAnimation = true
+            AdultAnimation = true
+        }        
     }
 }
 
