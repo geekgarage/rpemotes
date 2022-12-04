@@ -163,7 +163,7 @@ function AddEmoteMenu(menu)
             --print(type(b[1]), b.default)
             --print(b.default)
             -- START - Check for specific model AnimationOptions
-            if b.default ~= nil then
+            if b.default ~= nil and b[1] == nil then
                 print("we got arrays", b[1])
                 --for c, d in pairs(b) do
                 --    if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
