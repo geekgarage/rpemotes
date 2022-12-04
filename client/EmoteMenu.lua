@@ -162,37 +162,36 @@ function AddEmoteMenu(menu)
         for a, b in pairsByKeys(RP.Shared) do
 
             -- START - Check for specific model AnimationOptions
-            --if #b == 0 then
-            --    if b.default == nil then
-            --        print("[\"default\"] profile is missing. Please add a [\"default\"] profile to [\"" .. a .. "\"] shared emote")
-            --    end
+            if b.default ~= nil and type(b[1]) == 'table' then
+                print("we got arrays")
+                --for c, d in pairs(b) do
+                --    if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
+                --        b = d
+                --        break
+                --    end
+                --end
+                --if b.default ~= nil and #b == 0 then
+                --    b = b.default
+                --end
+            elseif b.default == nil and b[1] == nil then
+                print("[\"default\"] profile is missing. Please add a [\"default\"] profile to [\"" .. a .. "\"] shared emote")
+            end
+            --print(a)
+            --if b.default ~= nil then
+            --    local PedFound = false
             --    for c, d in pairs(b) do
-            --        if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
+            --        if type(d) == 'table' and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
+            --            print("PED: Found Match " .. c)
+            --            PedFound = true
             --            b = d
             --            break
             --        end
             --    end
-            --    if b.default ~= nil and #b == 0 then
+            --    if not PedFound then
+            --        print("Default selected")
             --        b = b.default
             --    end
             --end
-            print(a)
-            if b.default ~= nil then
-                local PedFound = false
-                for c, d in pairs(b) do
-                    print(c, d)
-                    if type(d) == 'table' and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
-                        print("PED: Found Match " .. c)
-                        PedFound = true
-                        b = d
-                        break
-                    end
-                end
-                if not PedFound then
-                    print("Default selected")
-                    b = b.default
-                end
-            end
             -- END - Check for specific model AnimationOptions --
 
             x, y, z, otheremotename = table.unpack(b)
