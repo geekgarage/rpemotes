@@ -160,9 +160,9 @@ function AddEmoteMenu(menu)
 
     if Config.SharedEmotesEnabled then
         for a, b in pairsByKeys(RP.Shared) do
-            print(type(b[1]))
+            --print(type(b[1]))
             -- START - Check for specific model AnimationOptions
-            if b.default ~= nil and type(b[1]) == 'table' then
+            if b.default ~= nil and type(b[1]) == nil then
                 print("we got arrays")
                 --for c, d in pairs(b) do
                 --    if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
