@@ -166,7 +166,7 @@ Citizen.CreateThread(function()
         if IsControlJustPressed(1, 246) and isRequestAnim then
             target, distance = GetClosestPlayer()
             if (distance ~= -1 and distance < 3) then
-                if (MatchPedModelName(RP.Shared[requestedemote]) ~= nil then
+                if MatchPedModelName(RP.Shared[requestedemote]) ~= nil then
                     _, _, _, otheremote = table.unpack((MatchPedModelName(RP.Shared[requestedemote]))
                 elseif RP.Dances[requestedemote] ~= nil then
                     _, _, _, otheremote = table.unpack(RP.Dances[requestedemote])
