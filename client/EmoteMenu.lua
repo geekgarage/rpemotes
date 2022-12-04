@@ -330,6 +330,7 @@ if Config.Search then
                 table.sort(results, function(a, b) return a.name < b.name end)
                 for k, v in pairs(results) do
                     local desc = ""
+                    print(k, v)
                     if v.table == "Shared" then
                         local otheremotename = v.data[4]
                         if otheremotename == nil then
