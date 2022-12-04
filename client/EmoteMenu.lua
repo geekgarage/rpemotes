@@ -160,8 +160,8 @@ function AddEmoteMenu(menu)
 
     if Config.SharedEmotesEnabled then
         for a, b in pairsByKeys(RP.Shared) do
-            --print(type(b[1]), b.default)
-            -- START - Check for specific model AnimationOptions
+
+            -- START - Check for specific PED model
             if b.default == nil and b[1] == nil then
                 print("[\"default\"] profile is missing. Please add a [\"default\"] profile to [\"" .. a .. "\"] shared emote")
             end

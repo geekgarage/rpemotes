@@ -1602,20 +1602,6 @@ RP.Shared = {
             },
             AdultAnimation = true
         },
-        ["default"] = {
-            "creatures@rottweiler@amb@",
-            "hump_loop_ladydog",
-            "Dogs Humping (Female)",
-            "bdoghumping",
-            AnimationOptions = {
-                EmoteMoving = false,
-                EmoteLoop = true,
-                SyncOffsetFront = 0.0,
-                SyncOffsetSide = -0.028,
-                SyncOffsetHeading = 0.0
-            },
-            AdultAnimation = true
-        },
         ["ig_geek"] = {
             "creatures@rottweiler@amb@",
             "hump_loop_ladydog",
