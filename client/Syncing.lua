@@ -14,7 +14,7 @@ if Config.SharedEmotesEnabled then
             local emotename = string.lower(args[1])
             target, distance = GetClosestPlayer()
             if (distance ~= -1 and distance < 3) then
-                print("Emote name: " .. RP.Shared[emotename])
+                print(RP.Shared[emotename])
                 if RP.Shared[emotename] ~= nil then
                     dict, anim, ename = table.unpack(RP.Shared[emotename])
                     print(dict, anim, ename)
