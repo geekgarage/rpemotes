@@ -312,7 +312,7 @@ if Config.Search then
                 end
 
                 for k, v in pairs(results) do
-                    print(k, v)
+                    print(k.name, v.name)
                 end --debug
 
                 table.sort(results, function(a, b) return a.name < b.name end)
