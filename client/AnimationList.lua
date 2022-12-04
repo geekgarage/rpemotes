@@ -1544,11 +1544,11 @@ RP.Shared = {
         }
     },
     ["doghumping"] = {
-        "creatures@rottweiler@amb@",
-        "hump_loop_chop",
-        "Dogs Humping (Male)",
-        "bdoghumping2",
         ["default"] = {
+            "creatures@rottweiler@amb@",
+            "hump_loop_chop",
+            "Dogs Humping (Male)",
+            "bdoghumping2",
             AnimationOptions = {
                 EmoteMoving = false,
                 EmoteLoop = true,
@@ -1556,8 +1556,13 @@ RP.Shared = {
                 SyncOffsetSide = -0.028,
                 SyncOffsetHeading = 0.0
             },
+            AdultAnimation = true
         },
         ["a_c_husky"] = {
+            "creatures@rottweiler@amb@",
+            "hump_loop_chop",
+            "Dogs Humping (Male)",
+            "bdoghumping2",
             AnimationOptions = {
                 EmoteMoving = false,
                 EmoteLoop = true,
@@ -1565,8 +1570,13 @@ RP.Shared = {
                 SyncOffsetSide = -0.028,
                 SyncOffsetHeading = 0.0
             },
+            AdultAnimation = true
         },
         ["ig_geek"] = {
+            "creatures@rottweiler@amb@",
+            "hump_loop_chop",
+            "Dogs Humping (Male)",
+            "bdoghumping2",
             AnimationOptions = {
                 EmoteMoving = false,
                 EmoteLoop = true,
@@ -1574,8 +1584,8 @@ RP.Shared = {
                 SyncOffsetSide = -0.028,
                 SyncOffsetHeading = 0.0
             },
-        },
-        AdultAnimation = true
+            AdultAnimation = true
+        }
     },
     ["doghumping2"] = {
         ["a_c_husky"] = {
@@ -1619,7 +1629,7 @@ RP.Shared = {
                 SyncOffsetHeading = 0.0
             },
             AdultAnimation = true
-        }        
+        }
     }
 }
 
