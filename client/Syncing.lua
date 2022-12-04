@@ -85,7 +85,7 @@ AddEventHandler("SyncPlayEmoteSource", function(emote, player)
     local SyncOffsetSide = 0.0
     local SyncOffsetHeight = 0.0
     local SyncOffsetHeading = 180.1
-
+    print(emote)
     local playerEmote = MatchPedModelName(RP.Shared[emote])
 
     local AnimationOptions = playerEmote and playerEmote.AnimationOptions
