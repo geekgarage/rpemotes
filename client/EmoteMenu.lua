@@ -161,23 +161,25 @@ function AddEmoteMenu(menu)
     if Config.SharedEmotesEnabled then
         for a, b in pairsByKeys(RP.Shared) do
 
+            b = MatchPedModelName(b)
+
             -- START - Check for specific PED model
-            if b.default == nil and b[1] == nil then
-                print("[\"default\"] profile is missing. Please add a [\"default\"] profile to [\"" .. a .. "\"] shared emote")
-            end
-            if b.default ~= nil and b[1] == nil then
-                local PedFound = false
-                for c, d in pairs(b) do
-                    if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
-                        PedFound = true
-                        b = d
-                        break
-                    end
-                end
-                if not PedFound then
-                    b = b.default
-                end
-            end
+            --if b.default == nil and b[1] == nil then
+            --    print("[\"default\"] profile is missing. Please add a [\"default\"] profile to [\"" .. a .. "\"] shared emote")
+            --end
+            --if b.default ~= nil and b[1] == nil then
+            --    local PedFound = false
+            --    for c, d in pairs(b) do
+            --        if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
+            --            PedFound = true
+            --            b = d
+            --            break
+            --        end
+            --    end
+            --    if not PedFound then
+            --        b = b.default
+            --    end
+            --end
             -- END - Check for specific model AnimationOptions --
 
             x, y, z, otheremotename = table.unpack(b)
@@ -308,6 +310,7 @@ if Config.Search then
             for k, v in pairs(RP) do
                 if not ignoredCategories[k] then
                     for a, b in pairs(v) do
+                        b = MatchPedModelName(b)
                         if string.find(string.lower(a), string.lower(input)) or (b[3] ~= nil and string.find(string.lower(b[3]), string.lower(input))) then
                             print(k, a, b, b[3])
                             table.insert(results, {table = k, name = a, data = b})
@@ -434,6 +437,26 @@ if Config.Search then
             end
         end
     end
+end
+
+function MatchPedModelName(b)
+    if b.default == nil and b[1] == nil then
+        print("[\"default\"] profile is missing. Please add a [\"default\"] profile to [\"" .. a .. "\"] shared emote")
+    end
+    if b.default ~= nil and b[1] == nil then
+        local PedFound = false
+        for c, d in pairs(b) do
+            if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
+                PedFound = true
+                b = d
+                break
+            end
+        end
+        if not PedFound then
+            b = b.default
+        end
+    end
+    return b
 end
 
 function AddCancelEmote(menu)
