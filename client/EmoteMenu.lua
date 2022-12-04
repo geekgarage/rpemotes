@@ -161,21 +161,25 @@ function AddEmoteMenu(menu)
     if Config.SharedEmotesEnabled then
         for a, b in pairsByKeys(RP.Shared) do
             --print(type(b[1]), b.default)
-            --print(b.default)
             -- START - Check for specific model AnimationOptions
-            if b.default ~= nil and b[1] == nil then
-                print("we got arrays", b[1])
-                --for c, d in pairs(b) do
-                --    if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
-                --        b = d
-                --        break
-                --    end
-                --end
-                --if b.default ~= nil and #b == 0 then
-                --    b = b.default
-                --end
-            elseif b.default == nil and b[1] == nil then
+            if b.default == nil and b[1] == nil then
                 print("[\"default\"] profile is missing. Please add a [\"default\"] profile to [\"" .. a .. "\"] shared emote")
+            end
+            if b.default ~= nil and b[1] == nil then
+                local PedFound = false
+                for c, d in pairs(b) do
+                    print(c)
+                    if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
+                        print("PED: Found Match " .. c)
+                        PedFound = true
+                        b = d
+                        break
+                    end
+                end
+                if not PedFound then
+                    print("Default selected")
+                    b = b.default
+                end
             end
             --print(a)
             --if b.default ~= nil then
