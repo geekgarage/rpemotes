@@ -308,6 +308,7 @@ if Config.Search then
             for k, v in pairs(RP) do
                 if not ignoredCategories[k] then
                     for a, b in pairs(v) do
+                        print(b[3])
                         if string.find(string.lower(a), string.lower(input)) or (b[3] ~= nil and string.find(string.lower(b[3]), string.lower(input))) then
                             table.insert(results, {table = k, name = a, data = b})
                         end
@@ -331,9 +332,6 @@ if Config.Search then
                 for k, v in pairs(results) do
                     local desc = ""
                     if v.table == "Shared" then
-                        for r, d in pairs(v.table) do
-                            print(r, d)
-                        end
                         local otheremotename = v.data[4]
                         if otheremotename == nil then
                            desc = "/nearby (~g~" .. v.name .. "~w~)"
