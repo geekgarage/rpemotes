@@ -311,10 +311,6 @@ if Config.Search then
                     sharedDanceMenu = _menuPool:AddSubMenu(searchMenu, Config.Languages[lang]['sharedanceemotes'], "", true, Menuthing, Menuthing)
                 end
 
-                for k, v in pairs(results) do
-                    print(k, v.name)
-                end --debug
-
                 table.sort(results, function(a, b) return a.name < b.name end)
                 for k, v in pairs(results) do
                     local desc = ""
@@ -424,7 +420,7 @@ if Config.Search then
 end
 
 -- This function will fetch sub array data if emotes is defined on PED model name.
--- It will also check if a default sub array has been defined for any model that has none
+-- It will also check if a default sub array has been defined if other models has been defined
 function MatchPedModelName(b)
     if b.default == nil and b[1] == nil then
         print("[\"default\"] profile is missing. Please add a [\"default\"] profile to [\"" .. a .. "\"] shared emote")
@@ -433,14 +429,14 @@ function MatchPedModelName(b)
         local PedFound = false
         for c, d in pairs(b) do
             if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
-                print("PED Model: " .. c)
+                --print("PED Model: " .. c)
                 PedFound = true
                 b = d
                 break
             end
         end
         if not PedFound then
-            print("Default Selected")
+            --print("Default Selected")
             b = b.default
         end
     end
