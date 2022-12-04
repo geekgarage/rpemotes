@@ -41,32 +41,30 @@ AddEventHandler("SyncPlayEmote", function(emote, player)
     EmoteCancel()
     Wait(300)
     targetPlayerId = player
-    local playerEmote = MatchPedModelName(RP.Shared[emotename])
     -- wait a little to make sure animation shows up right on both clients after canceling any previous emote
-    if playerEmote ~= nil then
-        if playerEmote.AnimationOptions and playerEmote.AnimationOptions.Attachto then
+    if RP.Shared[emote] ~= nil then
+        if RP.Shared[emote].AnimationOptions and RP.Shared[emote].AnimationOptions.Attachto then
             -- We do not want to attach the player if the target emote already is attached to player
             -- this would cause issue where both player would be attached to each other and fall under the map
-            local targetEmote = MatchPedModelName(playerEmote[4])
-            if not targetEmote or not targetEmote.AnimationOptions or not targetEmote.AnimationOptions.Attachto then
+            local targetEmote = RP.Shared[emote][4]
+            if not targetEmote or not RP.Shared[targetEmote] or not RP.Shared[targetEmote].AnimationOptions or
+                not RP.Shared[targetEmote].AnimationOptions.Attachto then
                 local plyServerId = GetPlayerFromServerId(player)
                 local ply = PlayerPedId()
                 local pedInFront = GetPlayerPed(plyServerId ~= 0 and plyServerId or GetClosestPlayer())
-                local bone = playerEmote.AnimationOptions.bone or -1 -- No bone
-                local xPos = playerEmote.AnimationOptions.xPos or 0.0
-                local yPos = playerEmote.AnimationOptions.yPos or 0.0
-                local zPos = playerEmote.AnimationOptions.zPos or 0.0
-                local xRot = playerEmote.AnimationOptions.xRot or 0.0
-                local yRot = playerEmote.AnimationOptions.yRot or 0.0
-                local zRot = playerEmote.AnimationOptions.zRot or 0.0
+                local bone = RP.Shared[emote].AnimationOptions.bone or -1 -- No bone
+                local xPos = RP.Shared[emote].AnimationOptions.xPos or 0.0
+                local yPos = RP.Shared[emote].AnimationOptions.yPos or 0.0
+                local zPos = RP.Shared[emote].AnimationOptions.zPos or 0.0
+                local xRot = RP.Shared[emote].AnimationOptions.xRot or 0.0
+                local yRot = RP.Shared[emote].AnimationOptions.yRot or 0.0
+                local zRot = RP.Shared[emote].AnimationOptions.zRot or 0.0
                 AttachEntityToEntity(ply, pedInFront, GetPedBoneIndex(pedInFront, bone), xPos, yPos, zPos, xRot, yRot,
                     zRot, false, false, false, true, 1, true)
             end
         end
 
-
-
-        OnEmotePlay(playerEmote)
+        OnEmotePlay(RP.Shared[emote])
         return
     elseif RP.Dances[emote] ~= nil then
         OnEmotePlay(RP.Dances[emote])
@@ -85,10 +83,8 @@ AddEventHandler("SyncPlayEmoteSource", function(emote, player)
     local SyncOffsetSide = 0.0
     local SyncOffsetHeight = 0.0
     local SyncOffsetHeading = 180.1
-    print(RP.Shared[emote])
-    local playerEmote = MatchPedModelName(RP.Shared[emote])
 
-    local AnimationOptions = playerEmote and playerEmote.AnimationOptions
+    local AnimationOptions = RP.Shared[emote] and RP.Shared[emote].AnimationOptions
     if AnimationOptions then
         if AnimationOptions.SyncOffsetFront then
             SyncOffsetFront = AnimationOptions.SyncOffsetFront + 0.0
@@ -123,8 +119,8 @@ AddEventHandler("SyncPlayEmoteSource", function(emote, player)
     EmoteCancel()
     Wait(300)
     targetPlayerId = player
-    if playerEmote ~= nil then
-        OnEmotePlay(playerEmote)
+    if RP.Shared[emote] ~= nil then
+        OnEmotePlay(RP.Shared[emote])
         return
     elseif RP.Dances[emote] ~= nil then
         OnEmotePlay(RP.Dances[emote])
@@ -150,13 +146,12 @@ end
 RegisterNetEvent("ClientEmoteRequestReceive")
 AddEventHandler("ClientEmoteRequestReceive", function(emotename, etype)
     isRequestAnim = true
-    
+    requestedemote = emotename
+
     if etype == 'Dances' then
-        requestedemote = MatchPedModelName(RP.Shared[emotename])
-        _, _, remote = table.unpack(requestedemote)
+        _, _, remote = table.unpack(RP.Dances[requestedemote])
     else
-        requestedemote = MatchPedModelName(RP.Shared[emotename])
-        _, _, remote = table.unpack(requestedemote)
+        _, _, remote = table.unpack(RP.Shared[requestedemote])
     end
 
     PlaySound(-1, "NAV", "HUD_AMMO_SHOP_SOUNDSET", 0, 0, 1)
@@ -169,13 +164,13 @@ Citizen.CreateThread(function()
         if IsControlJustPressed(1, 246) and isRequestAnim then
             target, distance = GetClosestPlayer()
             if (distance ~= -1 and distance < 3) then
-                if requestedemote ~= nil then
-                    _, _, _, otheremote = table.unpack(requestedemote)
-                elseif requestedemote ~= nil then
-                    _, _, _, otheremote = table.unpack(requestedemote)
+                if RP.Shared[requestedemote] ~= nil then
+                    _, _, _, otheremote = table.unpack(RP.Shared[requestedemote])
+                elseif RP.Dances[requestedemote] ~= nil then
+                    _, _, _, otheremote = table.unpack(RP.Dances[requestedemote])
                 end
-                if otheremote == nil then otheremote = remote end
-                TriggerServerEvent("ServerValidEmote", GetPlayerServerId(target), remote, otheremote)
+                if otheremote == nil then otheremote = requestedemote end
+                TriggerServerEvent("ServerValidEmote", GetPlayerServerId(target), requestedemote, otheremote)
                 isRequestAnim = false
             else
                 SimpleNotify(Config.Languages[lang]['nobodyclose'])

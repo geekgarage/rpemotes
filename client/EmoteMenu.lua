@@ -230,8 +230,6 @@ function AddEmoteMenu(menu)
     if Config.SharedEmotesEnabled then
         sharemenu.OnItemSelect = function(sender, item, index)
             if ShareTable[index] ~= 'none' then
-                print("ShareTable: " .. ShareTable[index]) --debug
-                print("ShareTable: " .. RP.Shared[ShareTable[index]]) --debug
                 target, distance = GetClosestPlayer()
                 if (distance ~= -1 and distance < 3) then
                     _, _, rename = table.unpack(RP.Shared[ShareTable[index]])

@@ -3,7 +3,6 @@
 -----------------------------------------------------------------------------------------------------
 
 RegisterNetEvent("ServerEmoteRequest", function(target, emotename, etype)
-    print("ServerEmoteRequest: ".. emotename) --debug
     TriggerClientEvent("ClientEmoteRequestReceive", target, emotename, etype)
 end)
 
