@@ -1602,7 +1602,7 @@ RP.Shared = {
             },
             AdultAnimation = true
         },
-        ["default"] = {
+        ["ig_geek"] = {
             "creatures@rottweiler@amb@",
             "hump_loop_ladydog",
             "Dogs Humping (Female)",
@@ -1616,7 +1616,7 @@ RP.Shared = {
             },
             AdultAnimation = true
         },
-        ["ig_geek"] = {
+        ["default"] = {
             "creatures@rottweiler@amb@",
             "hump_loop_ladydog",
             "Dogs Humping (Female)",
