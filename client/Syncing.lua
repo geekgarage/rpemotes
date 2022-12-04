@@ -34,6 +34,8 @@ end
 
 RegisterNetEvent("SyncPlayEmote")
 AddEventHandler("SyncPlayEmote", function(emote, player)
+    print("SyncPlayEmote - 'emote':")
+    print(emote)
     EmoteCancel()
     Wait(300)
     targetPlayerId = player
