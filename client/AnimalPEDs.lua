@@ -1,7 +1,9 @@
--------------------------------------------------------
---| List all the animal PEDs you got on the server. |--
---|     All basic GTA animals are listed below!     |--
--------------------------------------------------------
+---------------------------------------------------------
+--| List all the animal PEDs you have on your server. |--
+--|      All basic GTA animals are listed below!      |--
+--|   Anyone with a model listed below will be able   |--
+--|       to use animal emotes but not human          |--
+---------------------------------------------------------
 
 AnimalPed = {
     "a_c_boar",
@@ -35,5 +37,6 @@ AnimalPed = {
     "a_c_sharktiger",
     "a_c_shepherd",
     "a_c_stingray",
-    "a_c_westy"
+    "a_c_westy",
+    "ig_geek"
 }
