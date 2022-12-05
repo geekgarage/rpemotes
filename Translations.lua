@@ -1,5 +1,5 @@
 Config.Languages = {
-['pt'] = { -- Brazilian Portuguese 🇧🇷
+    ['pt'] = { -- Brazilian Portuguese 🇧🇷
         ['emotes'] = 'Emotes 🎬',
         ['danceemotes'] = "🕺 Emotes de Danças",
         ['animalemotes'] = "🐩 Emotes de Animais",
@@ -835,5 +835,5 @@ Config.Languages = {
         ['invalidvariation'] = "Ogiltig texturvariation. Giltiga val är: %s",
 		['firework'] = "Tryck ~y~G~w~ för att avfyra dina fyrverkerier",
         ['poop'] = "Press ~y~G~w~ to poop", --Need Translation
-    }
+    },
 }
