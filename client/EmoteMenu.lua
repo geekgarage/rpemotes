@@ -36,7 +36,7 @@ function ShowNotification(text)
 end
 
 -- Clear all the animal emotes if disabled.
-if not IsPedAnimal() then
+if not IsPlayerAnimal then
     RP.AnimalEmotes = {}
     for k, v in pairs(RP) do
         for i, j in pairs(v) do
@@ -87,7 +87,7 @@ function AddEmoteMenu(menu)
     end
     local dancemenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['danceemotes'], "", "", Menuthing, Menuthing)
     local animalmenu
-    if IsPedAnimal() then
+    if IsPlayerAnimal then
         animalmenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['animalemotes'], "", "", Menuthing, Menuthing)
         table.insert(EmoteTable, Config.Languages[lang]['animalemotes'])
     end
@@ -146,7 +146,7 @@ function AddEmoteMenu(menu)
         end
     end
 
-    if IsPedAnimal() then
+    if IsPlayerAnimal then
         for a, b in pairsByKeys(RP.AnimalEmotes) do
             x, y, z = table.unpack(b)
             animalitem = NativeUI.CreateItem(z, "/e (" .. a .. ")")
@@ -221,7 +221,7 @@ function AddEmoteMenu(menu)
         EmoteMenuStart(DanceTable[index], "dances")
     end
 
-    if IsPedAnimal() then
+    if IsPlayerAnimal then
         animalmenu.OnItemSelect = function(sender, item, index)
             EmoteMenuStart(AnimalTable[index], "animals")
         end
