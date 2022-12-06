@@ -204,6 +204,29 @@ end)
 -----------------------------------------------------------------------------------------------------
 ------ Functions and stuff --------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------
+-- This function will fetch sub array data if emotes is defined on PED model name.
+-- It will also check if a default sub array has been defined if other models has been defined
+function MatchPedModelName(b)
+    if b and b.default == nil and b[1] == nil then
+        print("[\"default\"] profile is missing. Please add a [\"default\"] profile to [\"" .. a .. "\"] shared emote")
+    end
+    if b and b.default ~= nil and b[1] == nil then
+        local PedFound = false
+        for c, d in pairs(b) do
+            if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
+                DebugPrint("PED Model: " .. c)
+                PedFound = true
+                b = d
+                break
+            end
+        end
+        if not PedFound then
+            DebugPrint("Default Selected")
+            b = b.default
+        end
+    end
+    return b
+end
 
 function EmoteCancel(force)
     local ply = PlayerPedId()
@@ -348,7 +371,6 @@ end
 function EmoteMenuStart(args, hard, textureVariation)
     local name = args
     local etype = hard
-    print(etype)
     if etype == "dances" then
         if RP.Dances[name] ~= nil then
             OnEmotePlay(RP.Dances[name])
@@ -363,8 +385,6 @@ function EmoteMenuStart(args, hard, textureVariation)
         end
     elseif etype == "emotes" then
         if RP.Emotes[name] ~= nil then
-            print(name)
-            print(type(RP.Emotes[name]))
             OnEmotePlay(RP.Emotes[name])
         else
             if name ~= "🕺 Dance Emotes" then end
