@@ -363,6 +363,8 @@ function EmoteMenuStart(args, hard, textureVariation)
         end
     elseif etype == "emotes" then
         if RP.Emotes[name] ~= nil then
+            print(name)
+            print(type(RP.Emotes[name]))
             OnEmotePlay(RP.Emotes[name])
         else
             if name ~= "🕺 Dance Emotes" then end

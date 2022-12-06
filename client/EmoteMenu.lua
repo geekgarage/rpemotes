@@ -289,7 +289,7 @@ function AddEmoteMenu(menu)
         EmoteMenuStart(PropETable[index], "props")
     end
     
-   propmenu.OnListSelect = function(menu, item, itemIndex, listIndex)
+    propmenu.OnListSelect = function(menu, item, itemIndex, listIndex)
         EmoteMenuStart(PropETable[itemIndex], "props", item:IndexToItem(listIndex).Value)
     end
 
