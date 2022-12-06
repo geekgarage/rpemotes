@@ -51,9 +51,6 @@ for _, v in ipairs(AnimalPed) do
     table.insert(AnimalPedHash, GetHashKey(v))
 end
 
-for _, v in ipairs(AnimalPedHash) do
-    print(v)
-end
 print(PlayerPedId())
 print(GetEntityModel(PlayerPedId()))
 
