@@ -53,7 +53,7 @@ for _, v in AnimalPed do
 end
 
 -- Free memory
-function AnimalPed.doSth(x) 
-    AnimalPed = nil 
-end 
+--function AnimalPed.doSth(x) 
+AnimalPed = nil 
+--end 
 print("done loading animal hash into array")
