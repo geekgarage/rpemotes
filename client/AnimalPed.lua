@@ -63,7 +63,7 @@ function IsPedAnimal()
     return false
 end
 
-IsPlayerAnimal = IsPedAnimal()
+PlayerIsAnimal = IsPedAnimal()
 
 -- Freeup Memory
 AnimalPed = nil
