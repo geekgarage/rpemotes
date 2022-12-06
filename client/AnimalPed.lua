@@ -54,6 +54,6 @@ end
 
 -- Free memory
 --function AnimalPed.doSth(x) 
-AnimalPed = nil 
+--  AnimalPed = nil 
 --end 
 print("done loading animal hash into array")
