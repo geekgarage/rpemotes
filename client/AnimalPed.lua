@@ -54,6 +54,8 @@ end
 for _, v in ipairs(AnimalPedHash) do
     print(v)
 end
+print(PlayerPedId())
+print(GetEntityModel(PlayerPedId()))
 
 -- Function to check if player PED is on the Animal PED list
 function IsPedAnimal()
