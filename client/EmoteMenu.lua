@@ -89,10 +89,10 @@ function AddEmoteMenu(menu)
     local dancemenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['danceemotes'], "", "", Menuthing, Menuthing)
     local humanmenu
     local animalmenu
-    if not PlayerIsAnimal and Config.AnimalEmotesEnabled then
+    if Config.AnimalEmotesEnabled and not PlayerIsAnimal then
         animalmenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['animalemotes'], "", "", Menuthing, Menuthing)
         table.insert(EmoteTable, Config.Languages[lang]['animalemotes'])
-    elseif PlayerIsAnimal and Config.AnimalEmotesEnabled then
+    elseif Config.AnimalEmotesEnabled and PlayerIsAnimal then
         humanmenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['humanemotes'], "", "", Menuthing, Menuthing)
         table.insert(EmoteTable, Config.Languages[lang]['humanemotes'])
     end
@@ -137,7 +137,7 @@ function AddEmoteMenu(menu)
                 favEmotes[a] = z
             end
         end
-    elseif PlayerIsAnimal then
+    elseif Config.AnimalEmotesEnabled and PlayerIsAnimal then
         for a, b in pairsByKeys(RP.Emotes) do
             x, y, z = table.unpack(b)
             emoteitem = NativeUI.CreateItem(z, "/e (" .. a .. ")")
@@ -173,7 +173,7 @@ function AddEmoteMenu(menu)
                 favEmotes[a] = z
             end
         end
-    elseif not PlayerIsAnimal then
+    elseif Config.AnimalEmotesEnabled and not PlayerIsAnimal then
         for a, b in pairsByKeys(RP.AnimalEmotes) do
             x, y, z = table.unpack(b)
             animalitem = NativeUI.CreateItem(z, "/e (" .. a .. ")")
@@ -248,12 +248,14 @@ function AddEmoteMenu(menu)
         EmoteMenuStart(DanceTable[index], "dances")
     end
 
-    animalmenu.OnItemSelect = function(sender, item, index)
-        EmoteMenuStart(AnimalTable[index], "animals")
-    end
-
-    humanmenu.OnItemSelect = function(sender, item, index)
-        EmoteMenuStart(HumanTable[index], "emotes")
+    if Config.AnimalEmotesEnabled and not PlayerIsAnimal then
+        animalmenu.OnItemSelect = function(sender, item, index)
+            EmoteMenuStart(AnimalTable[index], "animals")
+        end
+    elseif Config.AnimalEmotesEnabled and PlayerIsAnimal then
+        humanmenu.OnItemSelect = function(sender, item, index)
+            EmoteMenuStart(HumanTable[index], "emotes")
+        end
     end
 
 
