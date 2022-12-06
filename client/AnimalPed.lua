@@ -52,9 +52,9 @@ for _, v in ipairs(AnimalPed) do
 end
 
 -- Free memory
-function AnimalPed.doSth(x) 
+--function AnimalPed.doSth(x) 
     AnimalPed = nil 
-end 
+--end 
 
 for _, v in ipairs(AnimalPedHash) do
     print(v)
