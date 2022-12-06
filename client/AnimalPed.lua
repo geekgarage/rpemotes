@@ -63,4 +63,5 @@ function IsPedAnimal()
     return false
 end
 
+-- Freeup Memory
 AnimalPed = nil
