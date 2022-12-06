@@ -47,14 +47,16 @@ local AnimalPed = {
 
 AnimalPedHash = {}
 
-for k, v in ipairs(AnimalPed) do
-    print(k, v)
-    --table.insert(AnimalPedHash, GetHashKey(v))
-    print(GetHashKey(v))
+for _, v in ipairs(AnimalPed) do
+    table.insert(AnimalPedHash, GetHashKey(v))
 end
 
--- Free memory
---function AnimalPed.doSth(x) 
---  AnimalPed = nil 
---end 
+ Free memory
+function AnimalPed.doSth(x) 
+    AnimalPed = nil 
+end 
+
+for _, v in ipairs(AnimalPedHash) do
+    print(v)
+end
 print("done loading animal hash into array")
