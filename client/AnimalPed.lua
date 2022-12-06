@@ -51,7 +51,7 @@ for _, v in ipairs(AnimalPed) do
     table.insert(AnimalPedHash, GetHashKey(v))
 end
 
- Free memory
+-- Free memory
 function AnimalPed.doSth(x) 
     AnimalPed = nil 
 end 
