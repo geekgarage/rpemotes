@@ -63,4 +63,4 @@ function IsPedAnimal()
     return false
 end
 
-print(IsPedAnimal())
+AnimalPed = nil
