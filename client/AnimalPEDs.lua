@@ -5,7 +5,7 @@
 --|       to use animal emotes but not human          |--
 ---------------------------------------------------------
 
-AnimalPed = {
+local AnimalPed = {
     "a_c_boar",
     "a_c_cat_01",
     "a_c_chickenhawk",
@@ -40,3 +40,18 @@ AnimalPed = {
     "a_c_westy",
     "ig_geek"
 }
+
+-------------------------------------------------------------
+-- DO NOT EDIT BELOW THIS TEXT OR YOU CAN BREAK THE SCRIPT --
+-------------------------------------------------------------
+
+AnimalPedHash ={}
+
+for _, v in AnimalPed do
+    table.insert(AnimalPedHash, GetHashKey(v))
+end
+
+-- Free memory
+function AnimalPed.doSth(x) 
+    AnimalPed = nil 
+end 

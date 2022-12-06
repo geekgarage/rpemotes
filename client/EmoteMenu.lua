@@ -36,7 +36,7 @@ function ShowNotification(text)
 end
 
 -- Clear all the animal emotes if disabled.
-if not Config.AnimalEmotesEnabled then
+if not IsPedAnimal() then
     RP.AnimalEmotes = {}
     for k, v in pairs(RP) do
         for i, j in pairs(v) do
@@ -87,7 +87,7 @@ function AddEmoteMenu(menu)
     end
     local dancemenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['danceemotes'], "", "", Menuthing, Menuthing)
     local animalmenu
-    if Config.AnimalEmotesEnabled then
+    if IsPedAnimal() then
         animalmenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['animalemotes'], "", "", Menuthing, Menuthing)
         table.insert(EmoteTable, Config.Languages[lang]['animalemotes'])
     end
@@ -146,7 +146,7 @@ function AddEmoteMenu(menu)
         end
     end
 
-    if Config.AnimalEmotesEnabled then
+    if IsPedAnimal() then
         for a, b in pairsByKeys(RP.AnimalEmotes) do
             x, y, z = table.unpack(b)
             animalitem = NativeUI.CreateItem(z, "/e (" .. a .. ")")
@@ -221,7 +221,7 @@ function AddEmoteMenu(menu)
         EmoteMenuStart(DanceTable[index], "dances")
     end
 
-    if Config.AnimalEmotesEnabled then
+    if IsPedAnimal() then
         animalmenu.OnItemSelect = function(sender, item, index)
             EmoteMenuStart(AnimalTable[index], "animals")
         end
@@ -441,6 +441,17 @@ function MatchPedModelName(b)
         end
     end
     return b
+end
+
+-- Function to check if player PED is on the Animal PED list
+function IsPedAnimal()
+    local PlayerPedHash = GetEntityModel(PlayerPedId())
+    for _, ListedPedHash in AnimalPedHash do
+        if ListedPedHash == PlayerPedHash then
+            return true
+        end
+    end
+    return false
 end
 
 function AddCancelEmote(menu)
