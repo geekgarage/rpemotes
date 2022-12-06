@@ -4,7 +4,6 @@
 --|   Anyone with a model listed below will be able   |--
 --|       to use animal emotes but not human          |--
 ---------------------------------------------------------
-IsPlayerAnimal = false
 
 local AnimalPed = {
     "a_c_boar",
