@@ -47,7 +47,7 @@ local AnimalPed = {
 
 AnimalPedHash = {}
 
-for k, v in AnimalPed do
+for k, v in ipairs(AnimalPed) do
     print(k, v)
     --table.insert(AnimalPedHash, GetHashKey(v))
     print(GetHashKey(v))
