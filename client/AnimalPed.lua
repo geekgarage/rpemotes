@@ -58,8 +58,8 @@ end
 -- Function to check if player PED is on the Animal PED list
 function IsPedAnimal()
     local PlayerPedHash = GetEntityModel(PlayerPedId())
-    for _, ListedPedHash in AnimalPedHash do
-        if ListedPedHash == PlayerPedHash then
+    for _, v in AnimalPedHash do
+        if v == PlayerPedHash then
             return true
         end
     end
