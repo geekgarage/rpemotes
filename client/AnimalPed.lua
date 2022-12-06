@@ -49,9 +49,11 @@ AnimalPedHash ={}
 
 for _, v in AnimalPed do
     table.insert(AnimalPedHash, GetHashKey(v))
+    print(GetHashKey(v))
 end
 
 -- Free memory
 function AnimalPed.doSth(x) 
     AnimalPed = nil 
 end 
+print("done loading animal hash into array")
