@@ -4,6 +4,7 @@
 --|   Anyone with a model listed below will be able   |--
 --|       to use animal emotes but not human          |--
 ---------------------------------------------------------
+IsPlayerAnimal = false
 
 local AnimalPed = {
     "a_c_boar",
@@ -55,7 +56,6 @@ end
 
 function IsPedAnimal()
     local PlayerPedHash = GetEntityModel(PlayerPedId())
-    print(PlayerPedHash)
     for _, ListedPedHash in ipairs(AnimalPedHash) do
         if ListedPedHash == PlayerPedHash then
             return true
@@ -64,5 +64,8 @@ function IsPedAnimal()
     return false
 end
 
+IsPlayerAnimal = IsPedAnimal()
+
 -- Freeup Memory
 AnimalPed = nil
+AnimalPedHash = nil
