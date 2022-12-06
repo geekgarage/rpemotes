@@ -51,10 +51,9 @@ for _, v in ipairs(AnimalPed) do
     table.insert(AnimalPedHash, GetHashKey(v))
 end
 
-print(PlayerPedId())
-print(GetEntityModel(PlayerPedId()))
-
 -- Function to check if player PED is on the Animal PED list
+print(IsPedAnimal())
+
 function IsPedAnimal()
     local PlayerPedHash = GetEntityModel(PlayerPedId())
     for _, v in AnimalPedHash do
