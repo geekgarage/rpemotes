@@ -152,6 +152,7 @@ function AddEmoteMenu(menu)
     end
 
     for a, b in pairsByKeys(RP.Dances) do
+        b = MatchPedModelName(b)
         x, y, z = table.unpack(b)
         danceitem = NativeUI.CreateItem(z, "/e (" .. a .. ")")
         dancemenu:AddItem(danceitem)
@@ -209,6 +210,7 @@ function AddEmoteMenu(menu)
     end
 
     for a, b in pairsByKeys(RP.PropEmotes) do
+        b = MatchPedModelName(b)
         x, y, z = table.unpack(b)
     
         if b.AnimationOptions.PropTextureVariations then 
@@ -457,30 +459,6 @@ if Config.Search then
             end
         end
     end
-end
-
--- This function will fetch sub array data if emotes is defined on PED model name.
--- It will also check if a default sub array has been defined if other models has been defined
-function MatchPedModelName(b)
-    if b and b.default == nil and b[1] == nil then
-        print("[\"default\"] profile is missing. Please add a [\"default\"] profile to [\"" .. a .. "\"] shared emote")
-    end
-    if b and b.default ~= nil and b[1] == nil then
-        local PedFound = false
-        for c, d in pairs(b) do
-            if c ~= "default" and GetHashKey(c) == GetEntityModel(PlayerPedId()) then
-                DebugPrint("PED Model: " .. c)
-                PedFound = true
-                b = d
-                break
-            end
-        end
-        if not PedFound then
-            DebugPrint("Default Selected")
-            b = b.default
-        end
-    end
-    return b
 end
 
 function AddCancelEmote(menu)
