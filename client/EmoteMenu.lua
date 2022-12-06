@@ -129,6 +129,7 @@ function AddEmoteMenu(menu)
 
     if not PlayerIsAnimal then
         for a, b in pairsByKeys(RP.Emotes) do
+            b = MatchPedModelName(b)
             x, y, z = table.unpack(b)
             emoteitem = NativeUI.CreateItem(z, "/e (" .. a .. ")")
             submenu:AddItem(emoteitem)
@@ -139,6 +140,7 @@ function AddEmoteMenu(menu)
         end
     elseif Config.AnimalEmotesEnabled and PlayerIsAnimal then
         for a, b in pairsByKeys(RP.Emotes) do
+            b = MatchPedModelName(b)
             x, y, z = table.unpack(b)
             emoteitem = NativeUI.CreateItem(z, "/e (" .. a .. ")")
             humanmenu:AddItem(emoteitem)
@@ -165,6 +167,7 @@ function AddEmoteMenu(menu)
 
     if PlayerIsAnimal then
         for a, b in pairsByKeys(RP.AnimalEmotes) do
+            b = MatchPedModelName(b)
             x, y, z = table.unpack(b)
             animalitem = NativeUI.CreateItem(z, "/e (" .. a .. ")")
             submenu:AddItem(animalitem)
@@ -175,6 +178,7 @@ function AddEmoteMenu(menu)
         end
     elseif Config.AnimalEmotesEnabled and not PlayerIsAnimal then
         for a, b in pairsByKeys(RP.AnimalEmotes) do
+            b = MatchPedModelName(b)
             x, y, z = table.unpack(b)
             animalitem = NativeUI.CreateItem(z, "/e (" .. a .. ")")
             animalmenu:AddItem(animalitem)
