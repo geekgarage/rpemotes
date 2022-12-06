@@ -55,8 +55,6 @@ Config = {
     Framework = "qb-core",
     -- You can disable the Adult Emotes here.
     AdultEmotesDisabled = true,
-    -- You can disable the Animal Emotes here.
-    AnimalEmotesEnabled = true,
     -- Used to enable or disable the search feature in the menu.
     Search = true,
     -- You can disable the handsup here / change the keybind. It is currently set to H
