@@ -45,7 +45,7 @@ local AnimalPed = {
 -- DO NOT EDIT BELOW THIS TEXT OR YOU CAN BREAK THE SCRIPT --
 -------------------------------------------------------------
 
-AnimalPedHash = {}
+local AnimalPedHash = {}
 
 for _, v in ipairs(AnimalPed) do
     table.insert(AnimalPedHash, GetHashKey(v))
