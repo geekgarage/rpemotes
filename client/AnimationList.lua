@@ -536,25 +536,25 @@ RP.Shared = {
 	
 	
     ["handshake"] = {
-        "mp_ped_interaction",
-        "handshake_guy_a",
-        "Handshake",
-        "handshake2",
-        AnimationOptions = {
-            EmoteMoving = true,
-            EmoteDuration = 3000,
-            SyncOffsetFront = 0.9
-        }
+		"mp_ped_interaction",
+		"handshake_guy_a",
+		"Handshake",
+		"handshake2",
+		AnimationOptions = {
+			EmoteMoving = true,
+			EmoteDuration = 3000,
+			SyncOffsetFront = 0.9
+		}
     },
     ["handshake2"] = {
-        "mp_ped_interaction",
-        "handshake_guy_b",
-        "Handshake 2",
-        "handshake",
-        AnimationOptions = {
-            EmoteMoving = true,
-            EmoteDuration = 3000
-        }
+		"mp_ped_interaction",
+		"handshake_guy_b",
+		"Handshake 2",
+		"handshake",
+		AnimationOptions = {
+			EmoteMoving = true,
+			EmoteDuration = 3000
+		}
     },
     ["hug"] = {
         "mp_ped_interaction",

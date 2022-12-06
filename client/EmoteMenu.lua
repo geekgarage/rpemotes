@@ -35,8 +35,8 @@ function ShowNotification(text)
     end
 end
 
--- Clear all the animal emotes if disabled.
-if not Config.AnimalEmotesEnabled then
+-- Clear all the animal emotes not in the animal array if disabled.
+if not Config.AnimalEmotesEnabled and not PlayerIsAnimal then
     RP.AnimalEmotes = {}
     for k, v in pairs(RP) do
         for i, j in pairs(v) do
@@ -52,6 +52,7 @@ local FavEmoteTable = {}
 local KeyEmoteTable = {}
 local DanceTable = {}
 local AnimalTable = {}
+local HumanTable = {}
 local PropETable = {}
 local WalkTable = {}
 local FaceTable = {}
@@ -86,20 +87,22 @@ function AddEmoteMenu(menu)
         table.insert(EmoteTable, Config.Languages[lang]['searchemotes'])
     end
     local dancemenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['danceemotes'], "", "", Menuthing, Menuthing)
+    local humanmenu
     local animalmenu
-    if Config.AnimalEmotesEnabled then
+    if Config.AnimalEmotesEnabled and not PlayerIsAnimal then
         animalmenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['animalemotes'], "", "", Menuthing, Menuthing)
         table.insert(EmoteTable, Config.Languages[lang]['animalemotes'])
+    elseif Config.AnimalEmotesEnabled and PlayerIsAnimal then
+        humanmenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['humanemotes'], "", "", Menuthing, Menuthing)
+        table.insert(EmoteTable, Config.Languages[lang]['humanemotes'])
     end
     local propmenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['propemotes'], "", "", Menuthing, Menuthing)
     table.insert(EmoteTable, Config.Languages[lang]['danceemotes'])
-    table.insert(EmoteTable, Config.Languages[lang]['danceemotes'])
+    table.insert(EmoteTable, Config.Languages[lang]['danceemotes'])   -- Add two elements as offset
 
     if Config.SharedEmotesEnabled then
-        sharemenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['shareemotes'],
-            Config.Languages[lang]['shareemotesinfo'], "", Menuthing, Menuthing)
-        shareddancemenu = _menuPool:AddSubMenu(sharemenu, Config.Languages[lang]['sharedanceemotes'], "", "", Menuthing,
-            Menuthing)
+        sharemenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['shareemotes'], Config.Languages[lang]['shareemotesinfo'], "", Menuthing, Menuthing)
+        shareddancemenu = _menuPool:AddSubMenu(sharemenu, Config.Languages[lang]['sharedanceemotes'], "", "", Menuthing, Menuthing)
         table.insert(ShareTable, 'none')
         table.insert(EmoteTable, Config.Languages[lang]['shareemotes'])
     end
@@ -124,17 +127,32 @@ function AddEmoteMenu(menu)
         submenu:AddItem(keyinfo)
     end
 
-    for a, b in pairsByKeys(RP.Emotes) do
-        x, y, z = table.unpack(b)
-        emoteitem = NativeUI.CreateItem(z, "/e (" .. a .. ")")
-        submenu:AddItem(emoteitem)
-        table.insert(EmoteTable, a)
-        if not Config.SqlKeybinding then
-            favEmotes[a] = z
+    if not PlayerIsAnimal then
+        for a, b in pairsByKeys(RP.Emotes) do
+            b = MatchPedModelName(b)
+            x, y, z = table.unpack(b)
+            emoteitem = NativeUI.CreateItem(z, "/e (" .. a .. ")")
+            submenu:AddItem(emoteitem)
+            table.insert(EmoteTable, a)
+            if not Config.SqlKeybinding then
+                favEmotes[a] = z
+            end
+        end
+    elseif Config.AnimalEmotesEnabled and PlayerIsAnimal then
+        for a, b in pairsByKeys(RP.Emotes) do
+            b = MatchPedModelName(b)
+            x, y, z = table.unpack(b)
+            emoteitem = NativeUI.CreateItem(z, "/e (" .. a .. ")")
+            humanmenu:AddItem(emoteitem)
+            table.insert(HumanTable, a)
+            if not Config.SqlKeybinding then
+                favEmotes[a] = z
+            end
         end
     end
 
     for a, b in pairsByKeys(RP.Dances) do
+        b = MatchPedModelName(b)
         x, y, z = table.unpack(b)
         danceitem = NativeUI.CreateItem(z, "/e (" .. a .. ")")
         dancemenu:AddItem(danceitem)
@@ -148,8 +166,20 @@ function AddEmoteMenu(menu)
         end
     end
 
-    if Config.AnimalEmotesEnabled then
+    if PlayerIsAnimal then
         for a, b in pairsByKeys(RP.AnimalEmotes) do
+            b = MatchPedModelName(b)
+            x, y, z = table.unpack(b)
+            animalitem = NativeUI.CreateItem(z, "/e (" .. a .. ")")
+            submenu:AddItem(animalitem)
+            table.insert(EmoteTable, a)
+            if not Config.SqlKeybinding then
+                favEmotes[a] = z
+            end
+        end
+    elseif Config.AnimalEmotesEnabled and not PlayerIsAnimal then
+        for a, b in pairsByKeys(RP.AnimalEmotes) do
+            b = MatchPedModelName(b)
             x, y, z = table.unpack(b)
             animalitem = NativeUI.CreateItem(z, "/e (" .. a .. ")")
             animalmenu:AddItem(animalitem)
@@ -162,7 +192,11 @@ function AddEmoteMenu(menu)
 
     if Config.SharedEmotesEnabled then
         for a, b in pairsByKeys(RP.Shared) do
+
+            b = MatchPedModelName(b) -- Will fetch correct data array in case of PED model defined options
+
             x, y, z, otheremotename = table.unpack(b)
+            
             if otheremotename == nil then
                 shareitem = NativeUI.CreateItem(z, "/nearby (~g~" .. a .. "~w~)")
             else
@@ -176,6 +210,7 @@ function AddEmoteMenu(menu)
     end
 
     for a, b in pairsByKeys(RP.PropEmotes) do
+        b = MatchPedModelName(b)
         x, y, z = table.unpack(b)
     
         if b.AnimationOptions.PropTextureVariations then 
@@ -219,11 +254,16 @@ function AddEmoteMenu(menu)
         EmoteMenuStart(DanceTable[index], "dances")
     end
 
-    if Config.AnimalEmotesEnabled then
+    if Config.AnimalEmotesEnabled and not PlayerIsAnimal then
         animalmenu.OnItemSelect = function(sender, item, index)
             EmoteMenuStart(AnimalTable[index], "animals")
         end
+    elseif Config.AnimalEmotesEnabled and PlayerIsAnimal then
+        humanmenu.OnItemSelect = function(sender, item, index)
+            EmoteMenuStart(HumanTable[index], "emotes")
+        end
     end
+
 
     if Config.SharedEmotesEnabled then
         sharemenu.OnItemSelect = function(sender, item, index)
@@ -255,7 +295,7 @@ function AddEmoteMenu(menu)
         EmoteMenuStart(PropETable[index], "props")
     end
     
-   propmenu.OnListSelect = function(menu, item, itemIndex, listIndex)
+    propmenu.OnListSelect = function(menu, item, itemIndex, listIndex)
         EmoteMenuStart(PropETable[itemIndex], "props", item:IndexToItem(listIndex).Value)
     end
 
@@ -263,7 +303,11 @@ function AddEmoteMenu(menu)
         if Config.Search and EmoteTable[index] == Config.Languages[lang]['searchemotes'] then
             EmoteMenuSearch(submenu)
         elseif EmoteTable[index] ~= Config.Languages[lang]['favoriteemotes'] then
-            EmoteMenuStart(EmoteTable[index], "emotes")
+            if not PlayerIsAnimal then
+                EmoteMenuStart(EmoteTable[index], "emotes")
+            else
+                EmoteMenuStart(EmoteTable[index], "animals")
+            end
         end
     end
 end
@@ -289,6 +333,7 @@ if Config.Search then
             for k, v in pairs(RP) do
                 if not ignoredCategories[k] then
                     for a, b in pairs(v) do
+                        b = MatchPedModelName(b)
                         if string.find(string.lower(a), string.lower(input)) or (b[3] ~= nil and string.find(string.lower(b[3]), string.lower(input))) then
                             table.insert(results, {table = k, name = a, data = b})
                         end
