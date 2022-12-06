@@ -54,4 +54,14 @@ end
 for _, v in ipairs(AnimalPedHash) do
     print(v)
 end
-print("done loading animal hash into array")
+
+-- Function to check if player PED is on the Animal PED list
+function IsPedAnimal()
+    local PlayerPedHash = GetEntityModel(PlayerPedId())
+    for _, ListedPedHash in AnimalPedHash do
+        if ListedPedHash == PlayerPedHash then
+            return true
+        end
+    end
+    return false
+end

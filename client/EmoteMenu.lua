@@ -443,17 +443,6 @@ function MatchPedModelName(b)
     return b
 end
 
--- Function to check if player PED is on the Animal PED list
-function IsPedAnimal()
-    local PlayerPedHash = GetEntityModel(PlayerPedId())
-    for _, ListedPedHash in AnimalPedHash do
-        if ListedPedHash == PlayerPedHash then
-            return true
-        end
-    end
-    return false
-end
-
 function AddCancelEmote(menu)
     local newitem = NativeUI.CreateItem(Config.Languages[lang]['cancelemote'], Config.Languages[lang]['cancelemoteinfo'])
     menu:AddItem(newitem)
