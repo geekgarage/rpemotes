@@ -45,10 +45,11 @@ local AnimalPed = {
 -- DO NOT EDIT BELOW THIS TEXT OR YOU CAN BREAK THE SCRIPT --
 -------------------------------------------------------------
 
-AnimalPedHash ={}
+AnimalPedHash = {}
 
-for _, v in AnimalPed do
-    table.insert(AnimalPedHash, GetHashKey(v))
+for k, v in AnimalPed do
+    print(k, v)
+    --table.insert(AnimalPedHash, GetHashKey(v))
     print(GetHashKey(v))
 end
 
