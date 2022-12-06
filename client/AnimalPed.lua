@@ -55,7 +55,7 @@ end
 
 function IsPedAnimal()
     local PlayerPedHash = GetEntityModel(PlayerPedId())
-    for ListedPedHash in AnimalPedHash do
+    for _, ListedPedHash in ipairs(AnimalPedHash) do
         if ListedPedHash == PlayerPedHash then
             return true
         end
