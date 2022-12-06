@@ -93,8 +93,8 @@ function AddEmoteMenu(menu)
         animalmenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['animalemotes'], "", "", Menuthing, Menuthing)
         table.insert(EmoteTable, Config.Languages[lang]['animalemotes'])
     elseif PlayerIsAnimal and Config.AnimalEmotesEnabled then
-    humanmenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['humanemotes'], "", "", Menuthing, Menuthing)
-    table.insert(EmoteTable, Config.Languages[lang]['humanemotes'])
+        humanmenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['humanemotes'], "", "", Menuthing, Menuthing)
+        table.insert(EmoteTable, Config.Languages[lang]['humanemotes'])
     end
     local propmenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['propemotes'], "", "", Menuthing, Menuthing)
     table.insert(EmoteTable, Config.Languages[lang]['danceemotes'])
