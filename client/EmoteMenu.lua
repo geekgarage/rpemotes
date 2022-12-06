@@ -122,13 +122,25 @@ function AddEmoteMenu(menu)
         submenu:AddItem(keyinfo)
     end
 
-    for a, b in pairsByKeys(RP.Emotes) do
-        x, y, z = table.unpack(b)
-        emoteitem = NativeUI.CreateItem(z, "/e (" .. a .. ")")
-        submenu:AddItem(emoteitem)
-        table.insert(EmoteTable, a)
-        if not Config.SqlKeybinding then
-            favEmotes[a] = z
+    if not IsPlayerAnimal then
+        for a, b in pairsByKeys(RP.Emotes) do
+            x, y, z = table.unpack(b)
+            emoteitem = NativeUI.CreateItem(z, "/e (" .. a .. ")")
+            submenu:AddItem(emoteitem)
+            table.insert(EmoteTable, a)
+            if not Config.SqlKeybinding then
+                favEmotes[a] = z
+            end
+        end
+    else
+        for a, b in pairsByKeys(RP.AnimalEmotes) do
+            x, y, z = table.unpack(b)
+            animalitem = NativeUI.CreateItem(z, "/e (" .. a .. ")")
+            submenu:AddItem(animalitem)
+            table.insert(AnimalTable, a)
+            if not Config.SqlKeybinding then
+                favEmotes[a] = z
+            end
         end
     end
 
