@@ -138,7 +138,7 @@ function AddEmoteMenu(menu)
                 favEmotes[a] = z
             end
         end
-    elseif Config.AnimalEmotesEnabled and PlayerIsAnimal then
+    elseif PlayerIsAnimal then
         for a, b in pairsByKeys(RP.Emotes) do
             b = MatchPedModelName(b)
             x, y, z = table.unpack(b)
