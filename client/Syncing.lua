@@ -34,16 +34,10 @@ end
 
 RegisterNetEvent("SyncPlayEmote")
 AddEventHandler("SyncPlayEmote", function(emote, player)
-    print("SyncPlayEmote - 'emote':")
-    print(emote)
-    print("RP.Shared[" .. emote .. "]")
-    print(type(RP.Shared[emote]))
     EmoteCancel()
     Wait(300)
     targetPlayerId = player
     tempEmote = MatchPedModelName(RP.Shared[emote])
-    print("tempEmote:")
-    print(tempEmote)
     -- wait a little to make sure animation shows up right on both clients after canceling any previous emote
     if tempEmote ~= nil then
         if tempEmote.AnimationOptions and tempEmote.AnimationOptions.Attachto then
