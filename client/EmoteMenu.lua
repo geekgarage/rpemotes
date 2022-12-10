@@ -210,11 +210,11 @@ function AddEmoteMenu(menu)
     end
 
     for a, b in pairsByKeys(RP.PropEmotes) do
-        b = MatchPedModelName(b)
-        x, y, z = table.unpack(b)
+        c = MatchPedModelName(b)
+        x, y, z = table.unpack(c)
     
-        if b.AnimationOptions.PropTextureVariations then 
-            propitem = NativeUI.CreateListItem(z, b.AnimationOptions.PropTextureVariations, 1, "/e (" .. a .. ")")
+        if c.AnimationOptions.PropTextureVariations then 
+            propitem = NativeUI.CreateListItem(z, c.AnimationOptions.PropTextureVariations, 1, "/e (" .. a .. ")")
             propmenu:AddItem(propitem)
         else
             propitem = NativeUI.CreateItem(z, "/e (" .. a .. ")")
