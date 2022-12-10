@@ -34,6 +34,10 @@ end
 
 RegisterNetEvent("SyncPlayEmote")
 AddEventHandler("SyncPlayEmote", function(emote, player)
+    print("SyncPlayEmote - 'emote':")
+    print(emote)
+    print("RP.Shared[" .. emote .. "]")
+    print(type(RP.Shared[emote]))
     EmoteCancel()
     Wait(300)
     targetPlayerId = player
