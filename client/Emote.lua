@@ -647,8 +647,7 @@ function OnEmotePlay(EmoteName, textureVariation)
         end
     end
 
-    TaskPlayAnim(PlayerPedId(), ChosenDict, ChosenAnimation, 2.0, 2.0, AnimationDuration, MovementType, 0, false, false,
-        false)
+    TaskPlayAnim(PlayerPedId(), ChosenDict, ChosenAnimation, 2.0, 2.0, AnimationDuration, MovementType, 0, false, false, false)
     RemoveAnimDict(ChosenDict)
     IsInAnimation = true
     RunAnimationThread()
