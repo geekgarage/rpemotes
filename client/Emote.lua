@@ -22,19 +22,6 @@ local CanCancel = true
 local Pointing = false
 
 
--- Add the custom emotes
-for arrayName, array in pairs(CustomDP) do
-    if RP[arrayName] then
-        for emoteName, emoteData in pairs(array) do
-            RP[arrayName][emoteName] = emoteData
-        end
-    end
-    -- Free memory
-    CustomDP[arrayName] = nil
-end
--- Free memory
-CustomDP = nil
-
 -- Remove emotes if needed
 
 local emoteTypes = {
