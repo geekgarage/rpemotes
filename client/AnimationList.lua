@@ -1611,7 +1611,8 @@ RP.Shared = {
             SyncOffsetSide = -0.028,
             SyncOffsetHeading = 0.0
         },
-        AdultAnimation = true
+        AdultAnimation = true,
+        AnimalEmote = true
     },
     ["bdoghumping2"] = {
         "creatures@rottweiler@amb@",
@@ -1625,7 +1626,8 @@ RP.Shared = {
             SyncOffsetSide = -0.028,
             SyncOffsetHeading = 0.0
         },
-        AdultAnimation = true
+        AdultAnimation = true,
+        AnimalEmote = true
     }
 }
 
