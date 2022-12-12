@@ -13,7 +13,7 @@ CustomDP.PropEmotes = {}
 
 
 -----------------------------------------------------------------------------------------
---| I don't think you should change the code below unless you know what you are doint |--
+--| I don't think you should change the code below unless you know what you are doing |--
 -----------------------------------------------------------------------------------------
 
 -- Add the custom emotes to RPEmotes main array
