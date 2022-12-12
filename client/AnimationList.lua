@@ -1029,6 +1029,62 @@ RP.Shared = {
             zRot = 94.0000
         }
     },
+    ["couplewed1a"] = { -- Male Custom emote by EnchantedBrownie
+        "EnchantedBrwny@wedding1a",
+        "wedding1a",
+        "Couple Wedding Pose 1A",
+        "couplewed1b",
+        AnimationOptions = {
+            EmoteMoving = false,
+            EmoteLoop = true
+        }
+    },
+    ["couplewed1b"] = { -- Female Custom emote by EnchantedBrownie
+        "EnchantedBrwny@wedding1b",
+        "wedding1b",
+        "Couple Wedding Pose 1B",
+        "couplewed1a",
+        AnimationOptions = {
+            EmoteMoving = false,
+            EmoteLoop = true,
+            Attachto = true,
+            bone = 0,
+            xPos = 0.0300,
+            yPos = 1.0000,
+            zPos = 0.0200,
+            xRot = 0.0000,
+            yRot = 0.0000,
+            zRot = 130.0000
+        }
+     },
+    ["couplewed2a"] = { -- Male Custom emote by EnchantedBrownie
+        "EnchantedBrwny@wedding2b",
+        "wedding2b",
+        "Couple Wedding Pose 2A",
+        "couplewed2b",
+        AnimationOptions = {
+            EmoteMoving = false,
+            EmoteLoop = true
+        }
+    },
+    ["couplewed2b"] = { -- Female Custom emote by EnchantedBrownie
+        "EnchantedBrwny@wedding2a",
+        "wedding2a",
+        "Couple Wedding Pose 2B",
+        "couplewed2a",
+        AnimationOptions = {
+            EmoteMoving = false,
+            EmoteLoop = true,
+            Attachto = true,
+            bone = 0,
+            xPos = 0.0100,
+            yPos = 0.2500,
+            zPos = 0.0,
+            xRot = 0.0,
+            yRot = 0.0,
+            zRot = -88.9000
+        }
+    },
 	["liftme"] = { -- Male Custom emote by -Moses-
         "couplepose1pack1anim2@animation",
         "couplepose1pack1anim2_clip",
@@ -1555,7 +1611,8 @@ RP.Shared = {
             SyncOffsetSide = -0.028,
             SyncOffsetHeading = 0.0
         },
-        AdultAnimation = true
+        AdultAnimation = true,
+        AnimalEmote = true
     },
     ["bdoghumping2"] = {
         "creatures@rottweiler@amb@",
@@ -1569,7 +1626,8 @@ RP.Shared = {
             SyncOffsetSide = -0.028,
             SyncOffsetHeading = 0.0
         },
-        AdultAnimation = true
+        AdultAnimation = true,
+        AnimalEmote = true
     }
 }
 
@@ -3011,7 +3069,8 @@ RP.AnimalEmotes = {
         AnimationOptions = {
             EmoteLoop = true
         },
-        AdultAnimation = true
+        AdultAnimation = true,
+	AnimalEmote = true
     }, 
     ["bdogmhump"] = {
         "creatures@rottweiler@amb@",
@@ -3020,7 +3079,8 @@ RP.AnimalEmotes = {
         AnimationOptions = {
             EmoteLoop = true
         },
-        AdultAnimation = true
+        AdultAnimation = true,
+	AnimalEmote = true
     },
     ["bdogdump"] = {
         "creatures@rottweiler@move",
@@ -9074,7 +9134,7 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
-    ["croissant"] = {
+    ["croissant"] = { --- Custom Prop by Bzzzi
         "mp_player_inteat@burger",
         "mp_player_int_eat_burger",
         "Croissant",
@@ -9088,6 +9148,294 @@ RP.PropEmotes = {
                 0.0000,
                 0.0000,
                 90.0000
+            },
+            EmoteMoving = true
+        }
+    },
+    ["gingerbread"] = { --- Custom Prop by Bzzzi
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Gingerbread Man",
+        AnimationOptions = {
+            Prop = 'bzzz_food_xmas_gingerbread_a',
+            PropBone = 18905,
+            PropPlacement = {
+                0.16,
+                0.04,
+                0.03,
+                18.0,
+                164.0,
+                -5.0
+            },
+            EmoteMoving = true
+        }
+    },
+    ["candycane"] = { --- Custom Prop by Bzzzi
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Candy Cane Red",
+        AnimationOptions = {
+            Prop = 'bzzz_food_xmas_lollipop_a',
+            PropBone = 18905,
+            PropPlacement = {
+                0.16,
+                0.02,
+                0.03,
+               -73.0,
+                146.0,
+                -5.0
+            },
+            EmoteMoving = true
+        }
+    },
+    ["candycaneb"] = { --- Custom Prop by Bzzzi
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Candy Cane Green",
+        AnimationOptions = {
+            Prop = 'bzzz_food_xmas_lollipop_b',
+            PropBone = 18905,
+            PropPlacement = {
+                0.16,
+                0.02,
+                0.03,
+               -73.0,
+                146.0,
+                -5.0
+            },
+            EmoteMoving = true
+        }
+    },
+    ["candycanec"] = { --- Custom Prop by Bzzzi
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Candy Cane Purple",
+        AnimationOptions = {
+            Prop = 'bzzz_food_xmas_lollipop_c',
+            PropBone = 18905,
+            PropPlacement = {
+                0.16,
+                0.02,
+                0.03,
+               -73.0,
+                146.0,
+                -5.0
+            },
+            EmoteMoving = true
+        }
+    },
+    ["candycaned"] = { --- Custom Prop by Bzzzi
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Candy Cane Yellow",
+        AnimationOptions = {
+            Prop = 'bzzz_food_xmas_lollipop_d',
+            PropBone = 18905,
+            PropPlacement = {
+                0.16,
+                0.02,
+                0.03,
+               -73.0,
+                146.0,
+                -5.0
+            },
+            EmoteMoving = true
+        }
+    },
+    ["candycanee"] = { --- Custom Prop by Bzzzi
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Candy Cane Blue",
+        AnimationOptions = {
+            Prop = 'bzzz_food_xmas_lollipop_e',
+            PropBone = 18905,
+            PropPlacement = {
+                0.16,
+                0.02,
+                0.03,
+               -73.0,
+                146.0,
+                -5.0
+            },
+            EmoteMoving = true
+        }
+    },
+    ["macaroon"] = { --- Custom Prop by Bzzzi
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Macaroon",
+        AnimationOptions = {
+            Prop = 'bzzz_food_xmas_macaroon_a',
+            PropBone = 18905,
+            PropPlacement = {
+                0.15,
+                0.07,
+                0.00,
+                38.0,
+                7.0,
+                7.0
+            },
+            EmoteMoving = true
+        }
+    },
+    ["xmasmug"] = { --- Custom Prop by Bzzzi
+        "mp_player_intdrink",
+        "loop_bottle",
+        "Xmas Mug - Tea",
+        AnimationOptions = {
+            Prop = 'bzzz_food_xmas_mug_a',
+            PropBone = 18905,
+            PropPlacement = {
+                0.09,
+               -0.01,
+                0.08,
+               -44.0,
+                137.0,
+                9.0
+            },
+            EmoteMoving = true
+        }
+    },
+    ["xmasmug2"] = { --- Custom Prop by Bzzzi
+        "mp_player_intdrink",
+        "loop_bottle",
+        "Xmas Mug - Coffee",
+        AnimationOptions = {
+            Prop = 'bzzz_food_xmas_mug_b',
+            PropBone = 18905,
+            PropPlacement = {
+                0.09,
+               -0.01,
+                0.08,
+               -44.0,
+                137.0,
+                9.0
+            },
+            EmoteMoving = true
+        }
+    },
+    ["xmaswine"] = { --- Custom Prop by Bzzzi
+        "mp_player_intdrink",
+        "loop_bottle",
+        "Xmas Mulled Wine",
+        AnimationOptions = {
+            Prop = 'bzzz_food_xmas_mulled_wine_a',
+            PropBone = 18905,
+            PropPlacement = {
+                0.13,
+               0.03,
+                0.05,
+               -110.0,
+               -47.0,
+                7.0
+            },
+            EmoteMoving = true
+        }
+    },
+    ["pizzaslice"] = { --- Custom Prop by knjgh
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Pizza Slice - Jalapeño And Peperoni",
+        AnimationOptions = {
+            Prop = 'knjgh_pizzaslice1',
+            PropBone = 60309,
+            PropPlacement = {
+                0.0500,
+                -0.0200,
+                -0.0200,
+                73.6928,
+                -66.7427,
+                68.3677
+            },
+            EmoteMoving = true
+        }
+    },
+    ["pizzas"] = { --- Custom Prop by knjgh
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Pizza Slice - Jalapeño And Peperoni",
+        AnimationOptions = {
+            Prop = 'knjgh_pizzaslice1',
+            PropBone = 60309,
+            PropPlacement = {
+                0.0500,
+                -0.0200,
+                -0.0200,
+                73.6928,
+                -66.7427,
+                68.3677
+            },
+            EmoteMoving = true
+        }
+    },
+    ["pizzas2"] = { --- Custom Prop by knjgh
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Pizza Slice - Tomato And Pesto",
+        AnimationOptions = {
+            Prop = 'knjgh_pizzaslice2',
+            PropBone = 60309,
+            PropPlacement = {
+                0.0500,
+                -0.0200,
+                -0.0200,
+                73.6928,
+                -66.7427,
+                68.3677
+            },
+            EmoteMoving = true
+        }
+    },
+    ["pizzas3"] = { --- Custom Prop by knjgh
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Pizza Slice - Mushroom",
+        AnimationOptions = {
+            Prop = 'knjgh_pizzaslice3',
+            PropBone = 60309,
+            PropPlacement = {
+                0.0500,
+                -0.0200,
+                -0.0200,
+                73.6928,
+                -66.7427,
+                68.3677
+            },
+            EmoteMoving = true
+        }
+    },
+    ["pizzas4"] = { --- Custom Prop by knjgh
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Pizza Slice - Margherita",
+        AnimationOptions = {
+            Prop = 'knjgh_pizzaslice4',
+            PropBone = 60309,
+            PropPlacement = {
+                0.0500,
+                -0.0200,
+                -0.0200,
+                73.6928,
+                -66.7427,
+                68.3677
+            },
+            EmoteMoving = true
+        }
+    },
+    ["pizzas5"] = { --- Custom Prop by knjgh
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Pizza Slice - Double Peperoni",
+        AnimationOptions = {
+            Prop = 'knjgh_pizzaslice5',
+            PropBone = 60309,
+            PropPlacement = {
+                0.0500,
+                -0.0200,
+                -0.0200,
+                73.6928,
+                -66.7427,
+                68.3677
             },
             EmoteMoving = true
         }
@@ -15702,23 +16050,3 @@ RP.PropEmotes = {
     }
 
 }
-
--- Remove emotes if needed
-
-local emoteTypes = {
-    "Shared",
-    "Dances",
-    "AnimalEmotes",
-    "Emotes",
-    "PropEmotes",
-}
-
-for i = 1, #emoteTypes do
-    local emoteType = emoteTypes[i]
-    for emoteName, emoteData in pairs(RP[emoteType]) do
-        local shouldRemove = false
-        if Config.AdultEmotesDisabled and emoteData.AdultAnimation then shouldRemove = true end
-        if emoteData[1] and not ((emoteData[1] == 'Scenario') or (emoteData[1] == 'ScenarioObject') or (emoteData[1] == 'MaleScenario')) and not DoesAnimDictExist(emoteData[1]) then shouldRemove = true end
-        if shouldRemove then RP[emoteType][emoteName] = nil end
-    end
-end
