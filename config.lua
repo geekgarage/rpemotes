@@ -11,7 +11,7 @@ Config = {
     DebugDisplay = false,
     -- Set this to false if you have something else on X, and then just use /e c to cancel emotes.
     EnableXtoCancel = true,
-    CancelEmoteKey = 'x', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
+    CancelEmoteKey = 'DELETE', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
     -- Set this to true if you want to disarm the player when they play an emote.
     DisarmPlayer = false,
     -- Set this if you really wanna disable emotes in cars, as of 1.7.2 they only play the upper body part if in vehicle
@@ -54,16 +54,16 @@ Config = {
     -- Used for few framework dependent things. Accepted values: "qb-core", false
     Framework = "qb-core",
     -- You can disable the Adult Emotes here.
-    AdultEmotesDisabled = true,
+    AdultEmotesDisabled = false,
     -- You can disable the Animal Emotes here.
-    AnimalEmotesEnabled = false,
+    AnimalEmotesEnabled = true,
     -- Used to enable or disable the search feature in the menu.
     Search = true,
     -- You can disable the handsup here / change the keybind. It is currently set to H
-    HandsupKeybindEnabled = true,
+    HandsupKeybindEnabled = false,
     HandsupKeybind = 'h', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
     -- You can disable the fingrer pointing here / change the keybind. It is currently set to B
-    PointingKeybindEnabled = true,
+    PointingKeybindEnabled = false,
     PointingKeybind = 'b', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
 	CheckForUpdates = true,
 }
