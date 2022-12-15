@@ -1,5 +1,6 @@
 -- You probably shouldnt touch these.
 local AnimationDuration = -1
+local AnimationBlendSpeed = 2.0
 local ChosenAnimation = ""
 local ChosenDict = ""
 local IsInAnimation = false
@@ -421,6 +422,11 @@ end
 function EmoteCommandStart(source, args, raw)
     if #args > 0 then
         local name = string.lower(args[1])
+        if name == "handsup" then
+            AnimationBlendSpeed = 8.0
+        else
+            AnimationBlendSpeed = 2.0
+        end
         if name == "c" then
             if IsInAnimation then
                 EmoteCancel()
@@ -669,7 +675,7 @@ function OnEmotePlay(EmoteName, textureVariation)
         end
     end
 
-    TaskPlayAnim(PlayerPedId(), ChosenDict, ChosenAnimation, 2.0, 2.0, AnimationDuration, MovementType, 0, false, false, false)
+    TaskPlayAnim(PlayerPedId(), ChosenDict, ChosenAnimation, AnimationBlendSpeed, AnimationBlendSpeed, AnimationDuration, MovementType, 0, false, false, false)
     RemoveAnimDict(ChosenDict)
     IsInAnimation = true
     RunAnimationThread()
