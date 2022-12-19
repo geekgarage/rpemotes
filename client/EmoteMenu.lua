@@ -2,7 +2,7 @@ rightPosition = { x = 1450, y = 100 }
 leftPosition = { x = 0, y = 100 }
 menuPosition = { x = 0, y = 200 }
 
-local IsPlayerAnimalPed = IsPedAnimal()
+local IsPlayerAnimalPed = false
 
 if Config.MenuPosition then
     if Config.MenuPosition == "left" then
@@ -572,6 +572,7 @@ function OpenEmoteMenu()
     if _menuPool:IsAnyMenuOpen() then
         _menuPool:CloseAllMenus()
     else
+        IsPlayerAnimalPed = IsPedAnimal()
         mainMenu:Visible(true)
         ProcessMenu()
     end
