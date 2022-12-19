@@ -2,7 +2,7 @@ rightPosition = { x = 1450, y = 100 }
 leftPosition = { x = 0, y = 100 }
 menuPosition = { x = 0, y = 200 }
 
-print(IsPedAnimal())
+local IsPlayerAnimalPed = IsPedAnimal()
 
 if Config.MenuPosition then
     if Config.MenuPosition == "left" then
@@ -79,10 +79,10 @@ function AddEmoteMenu(menu)
     local dancemenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['danceemotes'], "", "", Menuthing, Menuthing)
     local humanmenu
     local animalmenu
-    if Config.AnimalEmotesEnabled and not IsPedAnimal() then
+    if Config.AnimalEmotesEnabled and not IsPlayerAnimalPed then
         animalmenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['animalemotes'], "", "", Menuthing, Menuthing)
         table.insert(EmoteTable, Config.Languages[lang]['animalemotes'])
-    elseif Config.AnimalEmotesEnabled and IsPedAnimal() then
+    elseif Config.AnimalEmotesEnabled and IsPlayerAnimalPed then
         humanmenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['humanemotes'], "", "", Menuthing, Menuthing)
         table.insert(EmoteTable, Config.Languages[lang]['humanemotes'])
     end
@@ -117,7 +117,7 @@ function AddEmoteMenu(menu)
         submenu:AddItem(keyinfo)
     end
 
-    if not IsPedAnimal() then
+    if not IsPlayerAnimalPed then
         for a, b in pairsByKeys(RP.Emotes) do
             b = MatchPedModelName(b)
             x, y, z = table.unpack(b)
@@ -128,7 +128,7 @@ function AddEmoteMenu(menu)
                 favEmotes[a] = z
             end
         end
-    elseif Config.AnimalEmotesEnabled and IsPedAnimal() then
+    elseif Config.AnimalEmotesEnabled and IsPlayerAnimalPed then
         for a, b in pairsByKeys(RP.Emotes) do
             b = MatchPedModelName(b)
             x, y, z = table.unpack(b)
@@ -156,7 +156,7 @@ function AddEmoteMenu(menu)
         end
     end
 
-    if IsPedAnimal() then
+    if IsPlayerAnimalPed then
         for a, b in pairsByKeys(RP.AnimalEmotes) do
             b = MatchPedModelName(b)
             x, y, z = table.unpack(b)
@@ -167,7 +167,7 @@ function AddEmoteMenu(menu)
                 favEmotes[a] = z
             end
         end
-    elseif Config.AnimalEmotesEnabled and not IsPedAnimal() then
+    elseif Config.AnimalEmotesEnabled and not IsPlayerAnimalPed then
         for a, b in pairsByKeys(RP.AnimalEmotes) do
             b = MatchPedModelName(b)
             x, y, z = table.unpack(b)
@@ -244,11 +244,11 @@ function AddEmoteMenu(menu)
         EmoteMenuStart(DanceTable[index], "dances")
     end
 
-    if Config.AnimalEmotesEnabled and not IsPedAnimal() then
+    if Config.AnimalEmotesEnabled and not IsPlayerAnimalPed then
         animalmenu.OnItemSelect = function(sender, item, index)
             EmoteMenuStart(AnimalTable[index], "animals")
         end
-    elseif Config.AnimalEmotesEnabled and IsPedAnimal() then
+    elseif Config.AnimalEmotesEnabled and IsPlayerAnimalPed then
         humanmenu.OnItemSelect = function(sender, item, index)
             EmoteMenuStart(HumanTable[index], "emotes")
         end
@@ -293,7 +293,7 @@ function AddEmoteMenu(menu)
         if Config.Search and EmoteTable[index] == Config.Languages[lang]['searchemotes'] then
             EmoteMenuSearch(submenu)
         elseif EmoteTable[index] ~= Config.Languages[lang]['favoriteemotes'] then
-            if not IsPedAnimal() then
+            if not IsPlayerAnimalPed then
                 EmoteMenuStart(EmoteTable[index], "emotes")
             else
                 EmoteMenuStart(EmoteTable[index], "animals")
