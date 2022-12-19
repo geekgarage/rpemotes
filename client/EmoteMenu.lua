@@ -2,6 +2,8 @@ rightPosition = { x = 1450, y = 100 }
 leftPosition = { x = 0, y = 100 }
 menuPosition = { x = 0, y = 200 }
 
+print(IsPedAnimal())
+
 if Config.MenuPosition then
     if Config.MenuPosition == "left" then
         menuPosition = leftPosition
