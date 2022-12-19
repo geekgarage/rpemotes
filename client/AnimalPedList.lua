@@ -6,7 +6,7 @@
 ---------------------------------------------------------
 
 AnimalPedList = {
---[[     "a_c_boar",
+    "a_c_boar",
     "a_c_cat_01",
     "a_c_chickenhawk",
     "a_c_chimp",
@@ -37,6 +37,6 @@ AnimalPedList = {
     "a_c_sharktiger",
     "a_c_shepherd",
     "a_c_stingray",
-    "a_c_westy", ]]
+    "a_c_westy",
     "ig_geek"
 }
