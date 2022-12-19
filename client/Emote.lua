@@ -1,6 +1,5 @@
 -- You probably shouldnt touch these.
 local AnimationDuration = -1
-local AnimationBlendSpeed = 2.0
 local ChosenAnimation = ""
 local ChosenDict = ""
 local IsInAnimation = false
@@ -394,6 +393,7 @@ end
 function EmoteMenuStart(args, hard, textureVariation)
     local name = args
     local etype = hard
+
     if etype == "dances" then
         if RP.Dances[name] ~= nil then
             OnEmotePlay(RP.Dances[name])
@@ -423,7 +423,7 @@ function EmoteCommandStart(source, args, raw)
     if #args > 0 then
         local name = string.lower(args[1])
         if name == "handsup" then
-            AnimationBlendSpeed = 8.0
+            AnimationBlendSpeed = 5.0
         else
             AnimationBlendSpeed = 2.0
         end
