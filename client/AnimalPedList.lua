@@ -5,7 +5,7 @@
 --|       to use animal emotes but not human          |--
 ---------------------------------------------------------
 
-local AnimalPed = {
+AnimalPedList = {
     "a_c_boar",
     "a_c_cat_01",
     "a_c_chickenhawk",
@@ -40,31 +40,3 @@ local AnimalPed = {
     "a_c_westy",
     "ig_geek"
 }
-
--------------------------------------------------------------
--- DO NOT EDIT BELOW THIS TEXT OR YOU CAN BREAK THE SCRIPT --
--------------------------------------------------------------
-
-local AnimalPedHash = {}
-
-for _, v in ipairs(AnimalPed) do
-    table.insert(AnimalPedHash, GetHashKey(v))
-end
-
--- Function to check if player PED is on the Animal PED list
-
-function IsPedAnimal()
-    local PlayerPedHash = GetEntityModel(PlayerPedId())
-    for _, ListedPedHash in ipairs(AnimalPedHash) do
-        if ListedPedHash == PlayerPedHash then
-            return true
-        end
-    end
-    return false
-end
-
-PlayerIsAnimal = IsPedAnimal()
-
--- Freeup Memory
-AnimalPed = nil
-AnimalPedHash = nil

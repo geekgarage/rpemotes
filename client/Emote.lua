@@ -20,6 +20,7 @@ local PtfxNoProp = false
 local AnimationThreadStatus = false
 local CanCancel = true
 local Pointing = false
+local AnimalPedHash = {}
 
 
 -- Remove emotes if needed
@@ -226,6 +227,7 @@ end)
 -----------------------------------------------------------------------------------------------------
 ------ Functions and stuff --------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------
+
 -- This function will fetch sub array data if emotes is defined on PED model name.
 -- It will also check if a default sub array has been defined if other models has been defined
 function MatchPedModelName(b)
@@ -248,6 +250,22 @@ function MatchPedModelName(b)
         end
     end
     return b
+end
+
+-- Function to check if player PED is on the Animal PED list
+
+
+function IsPedAnimal()
+    for _, v in ipairs(AnimalPedList) do
+        table.insert(AnimalPedHash, GetHashKey(v))
+    end
+    local PlayerPedHash = GetEntityModel(PlayerPedId())
+    for _, ListedPedHash in ipairs(AnimalPedHash) do
+        if ListedPedHash == PlayerPedHash then
+            return true
+        end
+    end
+    return false
 end
 
 function EmoteCancel(force)
