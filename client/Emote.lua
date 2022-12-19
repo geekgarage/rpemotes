@@ -260,7 +260,9 @@ function IsPedAnimal()
         table.insert(AnimalPedHash, GetHashKey(v))
     end
     local PlayerPedHash = GetEntityModel(PlayerPedId())
+    print("PlayerPedHash " .. PlayerPedHash)
     for _, ListedPedHash in ipairs(AnimalPedHash) do
+        print(ListedPedHash)
         if ListedPedHash == PlayerPedHash then
             return true
         end
