@@ -263,11 +263,11 @@ function IsPedAnimal()
     for _, ListedPedHash in ipairs(AnimalPedHash) do
         print("Model from list " .. ListedPedHash)
         if ListedPedHash == PlayerPedHash then
-            print("true")
+            print("Player is animal")
             return true
         end
     end
-    print("false")
+    print("Player is not animal")
     return false
 end
 
