@@ -253,8 +253,6 @@ function MatchPedModelName(b)
 end
 
 -- Function to check if player PED is on the Animal PED list
-
-
 function IsPedAnimal()
     for _, v in ipairs(AnimalPedList) do
         table.insert(AnimalPedHash, GetHashKey(v))
@@ -265,9 +263,11 @@ function IsPedAnimal()
     for _, ListedPedHash in ipairs(AnimalPedHash) do
         print("Model from list " .. ListedPedHash)
         if ListedPedHash == PlayerPedHash then
+            print("true")
             return true
         end
     end
+    print("false")
     return false
 end
 
