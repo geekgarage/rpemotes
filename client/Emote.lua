@@ -262,11 +262,6 @@ end
 
 -- Function to check if player PED is on the Animal PED list
 function IsPedAnimal()
-    --[[ local model = joaat(PlayerPedId())
-    RequestModel(model)
-    while not HasModelLoaded(model) do
-        Wait(0)
-    end ]]
     local PlayerPedHash = GetEntityModel(PlayerPedId())
     for _, ListedPedHash in ipairs(AnimalPedHash) do
         if ListedPedHash == PlayerPedHash then
