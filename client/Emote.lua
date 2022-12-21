@@ -257,6 +257,7 @@ for _, v in ipairs(AnimalPedList) do
     print("GetEntityModel Player: " .. GetEntityModel(PlayerPedId()))
     print("joaat: " .. joaat(v))
     print("GetHashKey: " .. GetHashKey(v))
+    print("`ig_geek`: " .. `ig_geek`)
     table.insert(AnimalPedHash, GetHashKey(v))
 end
 
