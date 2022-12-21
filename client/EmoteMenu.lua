@@ -570,9 +570,6 @@ function OpenEmoteMenu()
     if _menuPool:IsAnyMenuOpen() then
         _menuPool:CloseAllMenus()
     else
-        if mainMenu == nil then
-            GenerateMenuOnFirstOpen()
-        end
         mainMenu:Visible(true)
         ProcessMenu()
     end
@@ -582,17 +579,16 @@ function firstToUpper(str)
     return (str:gsub("^%l", string.upper))
 end
 
-function GenerateMenuOnFirstOpen()
-    AddEmoteMenu(mainMenu)
-    AddCancelEmote(mainMenu)
-    if Config.WalkingStylesEnabled then
-        AddWalkMenu(mainMenu)
-    end
-    if Config.ExpressionsEnabled then
-        AddFaceMenu(mainMenu)
-    end
-    _menuPool:RefreshIndex()
+AddEmoteMenu(mainMenu)
+AddCancelEmote(mainMenu)
+if Config.WalkingStylesEnabled then
+    AddWalkMenu(mainMenu)
 end
+if Config.ExpressionsEnabled then
+    AddFaceMenu(mainMenu)
+end
+
+_menuPool:RefreshIndex()
 
 local isMenuProcessing = false
 function ProcessMenu()
