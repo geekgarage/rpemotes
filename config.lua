@@ -10,7 +10,7 @@ Config = {
     -- Set this to true to enable some extra prints
     DebugDisplay = false,
     -- Set this to false if you have something else on X, and then just use /e c to cancel emotes.
-    EnableXtoCancel = true,
+    EnableXtoCancel = false,
     CancelEmoteKey = 'DELETE', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
     -- Set this to true if you want to disarm the player when they play an emote.
     DisarmPlayer = false,
