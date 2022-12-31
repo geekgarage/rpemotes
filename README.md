@@ -40,6 +40,8 @@ RpEmotes is a community driven FiveM emote menu allowing players to express them
 
 * German 🇩🇪
 
+* Hungarian 🇭🇺
+
 * Italian 🇮🇹
 
 * Polish 🇵🇱
@@ -51,6 +53,8 @@ RpEmotes is a community driven FiveM emote menu allowing players to express them
 * Spanish 🇪🇸
 
 * Swedish 🇸🇪
+
+* Turkish 🇹🇷
 
 All languages were translated or contributed by you, the community with the odd exception of using Google Translate.
 
@@ -382,6 +386,8 @@ A huge thank  you to the following people for their amazing contributions made t
 - Thank you to [PataMods](https://forum.cfx.re/u/Pata_PataMods) for the custom Christmas props
 
 - Thank you to [Crowded1337](https://www.gta5-mods.com/users/crowded1337) for the custom Gucci bag. I have removed the Gucci logo to comply with Rockstar Games & TakeTwo Interactive
+
+- Thanks to [EnchantedBrownie](https://www.gta5-mods.com/users/EnchantedBrownie) for the custom animations
 
 - Thank you to you, the community for being patient, showing love and appreciation, and for providing translations.
 
