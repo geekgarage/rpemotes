@@ -685,6 +685,14 @@ function OnEmotePlay(EmoteName, textureVariation)
             end
         end
     end
+--[[     CreateThread(function()
+        if AnimationDuration > 515 then
+            wait(AnimationDuration)
+            if IsInAnimation then IsInAnimation = not IsInAnimation end
+            if PtfxPrompt then PtfxPrompt = not PtfxPrompt end
+            if AnimationThreadStatus then AnimationThreadStatus = not AnimationThreadStatus end  
+        end 
+    end) ]]
 end
 
 -----------------------------------------------------------------------------------------------------

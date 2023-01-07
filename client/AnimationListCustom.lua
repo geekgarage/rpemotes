@@ -9,7 +9,49 @@ CustomDP.Walks = {}
 CustomDP.Shared = {}
 CustomDP.Dances = {}
 CustomDP.AnimalEmotes = {}
-CustomDP.Emotes = {}
+CustomDP.Emotes = {
+    ["ggloop"] = {
+        "missmic4",
+        "michael_tux_fidget",
+        "ggloop",
+        AnimationOptions = {
+            EmoteLoop = true
+        }
+    },
+    ["ggloopmoveing"] = {
+        "missmic4",
+        "michael_tux_fidget",
+        "ggloopmoveing",
+        AnimationOptions = {
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["ggmoving"] = {
+        "missmic4",
+        "michael_tux_fidget",
+        "ggmoving",
+        AnimationOptions = {
+            EmoteMoving = true
+        }
+    },
+    ["ggnotmoving"] = {
+        "missmic4",
+        "michael_tux_fidget",
+        "ggnotmoving",
+        AnimationOptions = {
+            EmoteMoving = false
+        }
+    },
+    ["ggstuck"] = {
+        "missmic4",
+        "michael_tux_fidget",
+        "ggnotmoving",
+        AnimationOptions = {
+            EmoteStuck = true
+        }
+    }
+}
 CustomDP.PropEmotes = {}
 
 
