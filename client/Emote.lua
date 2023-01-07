@@ -592,7 +592,7 @@ function OnEmotePlay(EmoteName, textureVariation)
 
     if EmoteName.AnimationOptions then
         if EmoteName.AnimationOptions.EmoteLoop then
-            MovementType = 1
+            MovementType = 1 -- 000001
             if EmoteName.AnimationOptions.EmoteMoving then
                 MovementType = 51 -- 110011
             end
@@ -600,7 +600,7 @@ function OnEmotePlay(EmoteName, textureVariation)
         elseif EmoteName.AnimationOptions.EmoteMoving then
             MovementType = 51 -- 110011
         elseif EmoteName.AnimationOptions.EmoteMoving == false then
-            MovementType = 0
+            MovementType = 0 -- 000000
         elseif EmoteName.AnimationOptions.EmoteStuck then
             MovementType = 50 -- 110010
         end
@@ -618,8 +618,8 @@ function OnEmotePlay(EmoteName, textureVariation)
             EmoteName.AnimationOptions.EmoteDuration = -1
             AttachWait = 0
         else
-            AnimationDuration = EmoteName.AnimationOptions.EmoteDuration
-            AttachWait = EmoteName.AnimationOptions.EmoteDuration
+            AnimationDuration = GetAnimDuration(ChosenDict, ChosenAnimation)
+            AttachWait = AnimationDuration
         end
 
         if EmoteName.AnimationOptions.PtfxAsset then
