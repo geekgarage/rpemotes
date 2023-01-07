@@ -598,11 +598,11 @@ function OnEmotePlay(EmoteName, textureVariation)
             end
 
         elseif EmoteName.AnimationOptions.EmoteMoving then
-            MovementType = 51 -- 110011
+            MovementType = 52 -- 
         elseif EmoteName.AnimationOptions.EmoteMoving == false then
-            MovementType = 0 -- 000000
+            MovementType = 0 -- Run emote once and move PED accoprding to animation without user input
         elseif EmoteName.AnimationOptions.EmoteStuck then
-            MovementType = 50 -- 110010
+            MovementType = 50 -- Run emote once while PED is controllable and freeze at the last animation frame
         end
 
     else
