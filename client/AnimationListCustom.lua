@@ -10,7 +10,7 @@ CustomDP.Shared = {}
 CustomDP.Dances = {}
 CustomDP.AnimalEmotes = {}
 CustomDP.Emotes = {
-    ["ggloop"] = {
+    ["ggloop"] = { -- Looping and wil slide around
         "missmic4",
         "michael_tux_fidget",
         "ggloop",
@@ -18,7 +18,7 @@ CustomDP.Emotes = {
             EmoteLoop = true
         }
     },
-    ["ggloopmoveing"] = {
+    ["ggloopmoveing"] = { -- Will loop and is controllable
         "missmic4",
         "michael_tux_fidget",
         "ggloopmoveing",
@@ -27,7 +27,7 @@ CustomDP.Emotes = {
             EmoteMoving = true
         }
     },
-    ["ggmoving"] = {
+    ["ggmoving"] = { -- Will loop and is controllable
         "missmic4",
         "michael_tux_fidget",
         "ggmoving",
@@ -46,7 +46,7 @@ CustomDP.Emotes = {
     ["ggstuck"] = {
         "missmic4",
         "michael_tux_fidget",
-        "ggnotmoving",
+        "ggstuck",
         AnimationOptions = {
             EmoteStuck = true
         }
