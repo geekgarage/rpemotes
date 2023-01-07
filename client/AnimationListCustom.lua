@@ -10,7 +10,9 @@ CustomDP.Shared = {}
 CustomDP.Dances = {}
 CustomDP.AnimalEmotes = {}
 CustomDP.Emotes = {
-    ["ggloop"] = { -- Looping and wil slide around
+    ["ggloop"] = {
+        -- Looping and will slide around and is NOT controllable
+        -- as expected!
         "missmic4",
         "michael_tux_fidget",
         "ggloop",
@@ -18,7 +20,9 @@ CustomDP.Emotes = {
             EmoteLoop = true
         }
     },
-    ["ggloopmoveing"] = { -- Will loop and is controllable
+    ["ggloopmoveing"] = {
+        -- Looping and is controllable
+        -- as expected!
         "missmic4",
         "michael_tux_fidget",
         "ggloopmoveing",
@@ -27,7 +31,9 @@ CustomDP.Emotes = {
             EmoteMoving = true
         }
     },
-    ["ggmoving"] = { -- Will loop and is controllable
+    ["ggmoving"] = {
+        -- Looping and is controllable (51)
+        -- Should Run once and should be controllable (52)
         "missmic4",
         "michael_tux_fidget",
         "ggmoving",
@@ -36,6 +42,8 @@ CustomDP.Emotes = {
         }
     },
     ["ggnotmoving"] = {
+        -- Run once and will slide around and is NOT controllable
+        -- as expected!
         "missmic4",
         "michael_tux_fidget",
         "ggnotmoving",
@@ -44,10 +52,11 @@ CustomDP.Emotes = {
         }
     },
     ["ggstuck"] = {
+        -- Run Once and is controllable
         "missmic4",
         "michael_tux_fidget",
         "ggstuck",
-        AnimationOptions = {
+        AnimationOptions = { 
             EmoteStuck = true
         }
     }
