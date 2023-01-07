@@ -56,9 +56,8 @@ if Config.FavKeybindEnabled then
         if doingFavoriteEmote then return end
         doingFavoriteEmote = true
         if not IsPedSittingInAnyVehicle(PlayerPedId()) then
-            if FavoriteEmote ~= "" and (not CanUseFavKeyBind or CanUseFavKeyBind()) then
+            if FavoriteEmote ~= "" and CanUseFavKeyBind() then
                 EmoteCommandStart(nil, { FavoriteEmote, 0 })
-                Wait(500)
             end
         end
         doingFavoriteEmote = false
