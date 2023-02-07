@@ -8,7 +8,56 @@ CustomDP.Expressions = {}
 CustomDP.Walks = {}
 CustomDP.Shared = {}
 CustomDP.Dances = {}
-CustomDP.AnimalEmotes = {}
+CustomDP.AnimalEmotes = {
+    ["bdogjump"] = {
+        "creatures@rottweiler@melee@",
+        "dog_attack",
+        "Jump (big dog)",
+        AnimationOptions = {
+            EmoteLoop = false
+        }
+    },
+    ["bdogjump2"] = {
+        "creatures@rottweiler@melee@",
+        "melee",
+        "Jump 2 (big dog)",
+        AnimationOptions = {
+            EmoteLoop = false
+        }
+    },
+    ["bdogjump3"] = {
+        "creatures@rottweiler@melee@streamed_core@",
+        "attack",
+        "Jump 3 (big dog)",
+        AnimationOptions = {
+            EmoteLoop = false
+        }
+    },
+    ["bdogjump4"] = {
+        "creatures@rottweiler@move",
+        "canter",
+        "Jump 4 (big dog)",
+        AnimationOptions = {
+            EmoteLoop = false
+        }
+    },
+    ["bdogjump5"] = {
+        "creatures@rottweiler@move",
+        "dying",
+        "Jump 5 (big dog)",
+        AnimationOptions = {
+            EmoteLoop = false
+        }
+    },
+    ["bdogjump6"] = {
+        "creatures@rottweiler@move",
+        "melee",
+        "Jump 6 (big dog)",
+        AnimationOptions = {
+            EmoteLoop = false
+        }
+    },
+}
 CustomDP.Emotes = {}
 CustomDP.PropEmotes = {}
 
