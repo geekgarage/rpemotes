@@ -10,57 +10,17 @@ CustomDP.Shared = {}
 CustomDP.Dances = {}
 CustomDP.AnimalEmotes = {
     ["bdogjump"] = {
-        "missfra0_chop_fchase",
-        "ballasog_jumpontrain_ig7",
+        "rcmextreme3",
+        "jump",
         "Jump (big dog)",
         AnimationOptions = {
             EmoteLoop = false
         }
     },
     ["bdogjump2"] = {
-        "missfra0_chop_fchase",
-        "ballasog_jumpontrain_ig7_camera",
+        "rcmextreme4",
+        "jump",
         "Jump 2 (big dog)",
-        AnimationOptions = {
-            EmoteLoop = false
-        }
-    },
-    ["bdogjump3"] = {
-        "missfra0_chop_fchase",
-        "fra_0_chop_jumps_down",
-        "Jump 3 (big dog)",
-        AnimationOptions = {
-            EmoteLoop = false
-        }
-    },
-    ["bdogjump4"] = {
-        "missfra0_chop_fchase",
-        "fra_0_ig_10_chop_jumps_over_flatbed",
-        "Jump 4 (big dog)",
-        AnimationOptions = {
-            EmoteLoop = false
-        }
-    },
-    ["bdogjump5"] = {
-        "missfra0_chop_fchase",
-        "fra_0_ig_11_chop_jumps_through_boxcar",
-        "Jump 5 (big dog)",
-        AnimationOptions = {
-            EmoteLoop = false
-        }
-    },
-    ["bdogjump6"] = {
-        "missfra0_chop_fchase",
-        "fra_0_ig_8_p1_chop_jumps_under_fence",
-        "Jump 6 (big dog)",
-        AnimationOptions = {
-            EmoteLoop = false
-        }
-    },
-    ["bdogjump7"] = {
-        "missfra0_chop_fchase",
-        "fra_0_ig_9_chop_jump_over_car_hood",
-        "Jump 7 (big dog)",
         AnimationOptions = {
             EmoteLoop = false
         }
