@@ -10,17 +10,9 @@ CustomDP.Shared = {}
 CustomDP.Dances = {}
 CustomDP.AnimalEmotes = {
     ["bdogjump"] = {
-        "rcmextreme3",
-        "jump",
+        "creatures@dog@move",
+        "jumpingfence",
         "Jump (big dog)",
-        AnimationOptions = {
-            EmoteLoop = false
-        }
-    },
-    ["bdogjump2"] = {
-        "rcmextreme4",
-        "jump",
-        "Jump 2 (big dog)",
         AnimationOptions = {
             EmoteLoop = false
         }
